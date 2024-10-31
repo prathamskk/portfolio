@@ -15,6 +15,5 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install "cython<3.0.0" wheel
-      - run: pip install "pyyaml==6.0" --no-build-isolation
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
