@@ -14,6 +14,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install "cython<3.0.0" wheel
-      - run: pip install -r requirements.txt
+      - run: echo "cython<3" > /tmp/constraint.txt
+      - run: PIP_CONSTRAINT=/tmp/constraint.txt pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
