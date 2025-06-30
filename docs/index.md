@@ -1,48 +1,133 @@
-# Project Highlights
+<div class="grid cards" markdown>
 
-Hi! Pratham here.
+-   
 
-These are some work i produced. There's more but ill update it eventually :)
+    ![Project banner](/slt_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    **SLT: Social Listening Tool**  
+    
+    <span class="tool-btn">Web Scraping</span> <span class="tool-btn">BigQuery</span> <span class="tool-btn">Data Pipeline</span> <span class="tool-btn">Topic Modelling</span><span class="tool-btn">Looker</span><span class="tool-btn">K-Means</span><span class="tool-btn">GCP</span><span class="tool-btn">Vertex AI</span><span class="tool-btn">Gemini</span>
+    
+    ---
+    Tool for social media listening and analytics.  
 
-## Zaika
-A custom-made food ordering app for my college festival
-
-
-<video controls autoplay muted>
-<source src="./zaika_how_to_app.mp4" type="video/mp4">
-</video>
-
-![zaika teaser](./zaika_teaser.jpg)
-
-![zaika how to use thumbnail](./zaika_usage_thumbnail.jpg)
+        
+    ---
+    [View Project](slt.md)
 
 
-Landing page promoting college festival
+-   
 
-![food fiesta website teaser](./zaika_website.jpg)
+    ![zaika teaser](/zaika_usage_thumbnail.jpg){style="width:100%;height:120px;object-fit:cover;"}
+    **Zaika: A Food Ordering App** 
+
+    <span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Firebase</span> <span class="tool-btn">NoSQL</span><span class="tool-btn">GCP</span>
+    
+    ---
+    A food ordering app for a college festival.
+
+    ---
+      
+    [View Project](zaika.md)
+
+-   
+
+    ![Food Fiesta website](/zaika_website.jpg){style="width:100%;height:120px;object-fit:cover;"}
+
+    **Food Fiesta: Landing Website**
+
+    <span class="tool-btn">HTML</span> <span class="tool-btn">CSS</span> <span class="tool-btn">Javascript</span> <span class="tool-btn">Parcel</span><span class="tool-btn">Bootstrap</span>
+    
+    ---
+    Website for the Food Fiesta event and Zaika app.  
+
+    ---
+    [View Project](ff.md)
+
+-   
+
+    ![Project banner](/instacart_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    **Instacart Reorder Prediction**
+    
+    <span class="tool-btn">XGBoost</span> <span class="tool-btn">EDA</span> <span class="tool-btn">Python</span> <span class="tool-btn">Data Visualization</span><span class="tool-btn">Machine Learning</span> 
+    
+    ---
+    Predicts if a product will be reordered in the next order.  
+
+    ---
+    [View Project](instacart.md)
+
+-   
+
+    ![LearnSBAR promo](/learnsbar2.png){style="width:100%;height:120px;object-fit:cover;"}
+    **LearnSBAR: Training Platform** 
+
+    <span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Typescript</span> <span class="tool-btn">Firebase</span><span class="tool-btn">GCP</span>
+
+    ---
+    Self-assessment app for nurse training. 
+
+    --- 
+    [View Project](learnsbar.md)
 
 
-<video controls autoplay muted>
-<source src="./live_now.mp4" type="video/mp4">
-</video>
 
-## LearnSBAR
+-   
 
-A self-assessment app developed for training nurses 
+    ![Project banner](/udemy_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    **Udemy Enrollment Prediction**  
 
-![learnsbar login design](./learnsbar1.png)
+    <span class="tool-btn">Web Scraping</span> <span class="tool-btn">Machine Learning</span> <span class="tool-btn">Python</span> <span class="tool-btn">Pandas</span><span class="tool-btn">Regression</span> 
+    
+    
+    ---
+    Predicts course enrollments on Udemy.  
+
+        
+    ---
+    [View Project](udemy.md)
 
 
-![learnsbar promo](./learnsbar2.png)
+-   
 
+    ![Project banner](/competitor_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    **AI Competitor Intelligence Tool**  
+    
+    
+    <span class="tool-btn">RAG</span> <span class="tool-btn">Gen AI</span> <span class="tool-btn">LLM</span> <span class="tool-btn">MCP</span><span class="tool-btn">Streamlit</span><span class="tool-btn">RAG Evaluation</span><span class="tool-btn">Spark</span> 
 
-![learnsbar promo stacked](./learnsbar3.png)
+    ---
+    AI-powered competitor analysis platform. 
 
+    
+    
+    --- 
+    [View Project](competitor.md)
 
-## Contact Me
+-   
 
-[☎️: +44 78189 61950](tel:+447818961950)
+    ![Project banner](/objectdetection.png){style="width:100%;height:120px;object-fit:cover;"}
+    **Real Time Object Detection**  
+    
+    <span class="tool-btn">OpenCV</span> <span class="tool-btn">YOLOv8</span> <span class="tool-btn">Deep Learning</span> <span class="tool-btn">Python</span><span class="tool-btn">Data Augmentation</span><span class="tool-btn">Dataset Generation</span>
 
-[📧: prathamskk@gmail.com](mailto:prathamskk@gmail.com)
+    ---
+    Real-time object detection using ML.  
 
-[Linkedin: www.linkedin.com/in/prathamskk/](https://www.linkedin.com/in/prathamskk/)
+    
+    ---
+    [View Project](real_time_object_detection.md)
+
+-   
+
+    ![Project banner](/azure_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    **Azure Data Lake + ETL Pipeline**  
+    
+    <span class="tool-btn">Azure</span> <span class="tool-btn">Databricks</span> <span class="tool-btn">ETL</span> <span class="tool-btn">ADLS Gen2</span><span class="tool-btn">Data Lake</span><span class="tool-btn">Spark</span>
+
+    ---
+    Data lake and ETL pipeline on Azure.  
+    
+    ---
+    [View Project](azure_data_lake_etl.md)
+
+</div>
