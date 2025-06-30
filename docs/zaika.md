@@ -32,12 +32,12 @@ FRONTEND: React, Vite, Material UI, Javascript
 BACKEND: Firebase , Firestore, Cloud Functions, Firebase Authentication,  App Check, 
 
 <video controls autoplay muted>
-<source src="/zaika_how_to_app.mp4" type="video/mp4">
+<source src="./zaika_how_to_app.mp4" type="video/mp4">
 </video>
 
-![zaika teaser](/zaika_teaser.jpg)
+![zaika teaser](./zaika_teaser.jpg)
 
-![zaika how to use thumbnail](/zaika_usage_thumbnail.jpg)
+![zaika how to use thumbnail](./zaika_usage_thumbnail.jpg)
 
 
 ---

@@ -2,7 +2,7 @@
 
 -   
 
-    ![Project banner](/slt_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    ![Project banner](./slt_banner.png){style="width:100%;height:120px;object-fit:cover;"}
     **SLT: Social Listening Tool**  
     
     <span class="tool-btn">Web Scraping</span> <span class="tool-btn">BigQuery</span> <span class="tool-btn">Data Pipeline</span> <span class="tool-btn">Topic Modelling</span><span class="tool-btn">Looker</span><span class="tool-btn">K-Means</span><span class="tool-btn">GCP</span><span class="tool-btn">Vertex AI</span><span class="tool-btn">Gemini</span>
@@ -17,7 +17,7 @@
 
 -   
 
-    ![zaika teaser](/zaika_usage_thumbnail.jpg){style="width:100%;height:120px;object-fit:cover;"}
+    ![zaika teaser](./zaika_usage_thumbnail.jpg){style="width:100%;height:120px;object-fit:cover;"}
     **Zaika: A Food Ordering App** 
 
     <span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Firebase</span> <span class="tool-btn">NoSQL</span><span class="tool-btn">GCP</span>
@@ -31,7 +31,7 @@
 
 -   
 
-    ![Food Fiesta website](/zaika_website.jpg){style="width:100%;height:120px;object-fit:cover;"}
+    ![Food Fiesta website](./zaika_website.jpg){style="width:100%;height:120px;object-fit:cover;"}
 
     **Food Fiesta: Landing Website**
 
@@ -45,7 +45,7 @@
 
 -   
 
-    ![Project banner](/instacart_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    ![Project banner](./instacart_banner.png){style="width:100%;height:120px;object-fit:cover;"}
     **Instacart Reorder Prediction**
     
     <span class="tool-btn">XGBoost</span> <span class="tool-btn">EDA</span> <span class="tool-btn">Python</span> <span class="tool-btn">Data Visualization</span><span class="tool-btn">Machine Learning</span> 
@@ -58,7 +58,7 @@
 
 -   
 
-    ![LearnSBAR promo](/learnsbar2.png){style="width:100%;height:120px;object-fit:cover;"}
+    ![LearnSBAR promo](./learnsbar2.png){style="width:100%;height:120px;object-fit:cover;"}
     **LearnSBAR: Training Platform** 
 
     <span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Typescript</span> <span class="tool-btn">Firebase</span><span class="tool-btn">GCP</span>
@@ -73,7 +73,7 @@
 
 -   
 
-    ![Project banner](/udemy_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    ![Project banner](./udemy_banner.png){style="width:100%;height:120px;object-fit:cover;"}
     **Udemy Enrollment Prediction**  
 
     <span class="tool-btn">Web Scraping</span> <span class="tool-btn">Machine Learning</span> <span class="tool-btn">Python</span> <span class="tool-btn">Pandas</span><span class="tool-btn">Regression</span> 
@@ -89,7 +89,7 @@
 
 -   
 
-    ![Project banner](/competitor_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    ![Project banner](./competitor_banner.png){style="width:100%;height:120px;object-fit:cover;"}
     **AI Competitor Intelligence Tool**  
     
     
@@ -105,7 +105,7 @@
 
 -   
 
-    ![Project banner](/objectdetection.png){style="width:100%;height:120px;object-fit:cover;"}
+    ![Project banner](./objectdetection.png){style="width:100%;height:120px;object-fit:cover;"}
     **Real Time Object Detection**  
     
     <span class="tool-btn">OpenCV</span> <span class="tool-btn">YOLOv8</span> <span class="tool-btn">Deep Learning</span> <span class="tool-btn">Python</span><span class="tool-btn">Data Augmentation</span><span class="tool-btn">Dataset Generation</span>
@@ -119,7 +119,7 @@
 
 -   
 
-    ![Project banner](/azure_banner.png){style="width:100%;height:120px;object-fit:cover;"}
+    ![Project banner](./azure_banner.png){style="width:100%;height:120px;object-fit:cover;"}
     **Azure Data Lake + ETL Pipeline**  
     
     <span class="tool-btn">Azure</span> <span class="tool-btn">Databricks</span> <span class="tool-btn">ETL</span> <span class="tool-btn">ADLS Gen2</span><span class="tool-btn">Data Lake</span><span class="tool-btn">Spark</span>
