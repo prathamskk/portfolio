@@ -8,7 +8,7 @@
     <span class="tool-btn">Web Scraping</span> <span class="tool-btn">BigQuery</span> <span class="tool-btn">Data Pipeline</span> <span class="tool-btn">Topic Modelling</span><span class="tool-btn">Looker</span><span class="tool-btn">K-Means</span><span class="tool-btn">GCP</span><span class="tool-btn">Vertex AI</span><span class="tool-btn">Gemini</span>
     
     ---
-    Tool for social media listening and analytics.  
+    A powerful social listening tool built for Sense Worldwide, a strategic innovation consultancy, that scrapes social media posts, analyzes trends through topic modeling, and delivers actionable insights via an interactive dashboard.
 
         
     ---
@@ -23,7 +23,7 @@
     <span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Firebase</span> <span class="tool-btn">NoSQL</span><span class="tool-btn">GCP</span>
     
     ---
-    A food ordering app for a college festival.
+    A streamlined food ordering app that served 800+ orders and onboarded 600+ users in a single day, featuring real-time order tracking for our college festival.
 
     ---
       
@@ -38,7 +38,7 @@
     <span class="tool-btn">HTML</span> <span class="tool-btn">CSS</span> <span class="tool-btn">Javascript</span> <span class="tool-btn">Parcel</span><span class="tool-btn">Bootstrap</span>
     
     ---
-    Website for the Food Fiesta event and Zaika app.  
+    A vibrant landing page showcasing our college's Food Fiesta event and introducing our innovative food ordering app Zaika, featuring event details, menu highlights, and seamless app integration.
 
     ---
     [View Project](ff.md)
@@ -51,7 +51,7 @@
     <span class="tool-btn">XGBoost</span> <span class="tool-btn">EDA</span> <span class="tool-btn">Python</span> <span class="tool-btn">Data Visualization</span><span class="tool-btn">Machine Learning</span> 
     
     ---
-    Predicts if a product will be reordered in the next order.  
+    Leveraged XGBoost and customer purchase history data to predict product reorder probability with 70% accuracy, analyzing 3 million orders and 50,000 products to optimize inventory management and improve customer experience.
 
     ---
     [View Project](instacart.md)
