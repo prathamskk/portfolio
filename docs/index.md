@@ -8,7 +8,7 @@
     <span class="tool-btn">Web Scraping</span> <span class="tool-btn">BigQuery</span> <span class="tool-btn">Data Pipeline</span> <span class="tool-btn">Topic Modelling</span><span class="tool-btn">Looker</span><span class="tool-btn">K-Means</span><span class="tool-btn">GCP</span><span class="tool-btn">Vertex AI</span><span class="tool-btn">Gemini</span>
     
     ---
-    A powerful social listening tool built for Sense Worldwide, a strategic innovation consultancy, that scrapes social media posts, analyzes trends through topic modeling, and delivers actionable insights via an interactive dashboard.
+    A powerful tool built for Sense Worldwide, an innovation consulting company, that collects and analyzes social media conversations to identify trends and patterns, presenting key findings through easy-to-use interactive charts and reports.
 
         
     ---
@@ -23,7 +23,7 @@
     <span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Firebase</span> <span class="tool-btn">NoSQL</span><span class="tool-btn">GCP</span>
     
     ---
-    A streamlined food ordering app that served 800+ orders and onboarded 600+ users in a single day, featuring real-time order tracking for our college festival.
+    A food ordering app that served 800+ orders and onboarded 600+ users in a single day, featuring real-time order tracking for our college festival.
 
     ---
       
@@ -38,7 +38,7 @@
     <span class="tool-btn">HTML</span> <span class="tool-btn">CSS</span> <span class="tool-btn">Javascript</span> <span class="tool-btn">Parcel</span><span class="tool-btn">Bootstrap</span>
     
     ---
-    A vibrant landing page showcasing our college's Food Fiesta event and introducing our innovative food ordering app Zaika, featuring event details, menu highlights, and seamless app integration.
+    A Vibrant website promoting our college's Food Fiesta event and our new food ordering app, with details about the festival, featured food items, and easy ways to order through the app.
 
     ---
     [View Project](ff.md)
@@ -51,7 +51,7 @@
     <span class="tool-btn">XGBoost</span> <span class="tool-btn">EDA</span> <span class="tool-btn">Python</span> <span class="tool-btn">Data Visualization</span><span class="tool-btn">Machine Learning</span> 
     
     ---
-    Leveraged XGBoost and customer purchase history data to predict product reorder probability with 70% accuracy, analyzing 3 million orders and 50,000 products to optimize inventory management and improve customer experience.
+    Leveraged XGBoost and customer purchase history to predict product reorder probability with 70% accuracy, analyzing 3 million orders and 50,000 products to help stores manage inventory better and improve the shopping experience.
 
     ---
     [View Project](instacart.md)
@@ -61,10 +61,10 @@
     ![LearnSBAR promo](./learnsbar2.png){style="width:100%;height:120px;object-fit:cover;"}
     **LearnSBAR: Training Platform** 
 
-    <span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Typescript</span> <span class="tool-btn">Firebase</span><span class="tool-btn">GCP</span>
+    <span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Typescript</span> <span class="tool-btn">AWS</span><span class="tool-btn">DynamoDB</span><span class="tool-btn">Voice Transcription</span>
 
     ---
-    Self-assessment app for nurse training. 
+    A training platform that helps nurses practice and improve their patient handoff communication skills through practice scenarios, instant feedback, and progress tracking. Features voice recording capabilities that automatically convert speech to text for easier review.
 
     --- 
     [View Project](learnsbar.md)
@@ -76,11 +76,11 @@
     ![Project banner](./udemy_banner.png){style="width:100%;height:120px;object-fit:cover;"}
     **Udemy Enrollment Prediction**  
 
-    <span class="tool-btn">Web Scraping</span> <span class="tool-btn">Machine Learning</span> <span class="tool-btn">Python</span> <span class="tool-btn">Pandas</span><span class="tool-btn">Regression</span> 
+    <span class="tool-btn">Web Scraping</span> <span class="tool-btn">Machine Learning</span> <span class="tool-btn">Python</span> <span class="tool-btn">Pandas</span><span class="tool-btn">Regression</span><span class="tool-btn">Random Forest</span><span class="tool-btn">Hyparameter Tuning</span> 
     
     
     ---
-    Predicts course enrollments on Udemy.  
+    Built a predictive model analyzing 9000+ Udemy courses to forecast enrollment numbers using features like course pricing, content length, and instructor ratings. Used Random Forest regression to help course creators optimize their offerings.
 
         
     ---
@@ -96,7 +96,7 @@
     <span class="tool-btn">RAG</span> <span class="tool-btn">Gen AI</span> <span class="tool-btn">LLM</span> <span class="tool-btn">MCP</span><span class="tool-btn">Streamlit</span><span class="tool-btn">RAG Evaluation</span><span class="tool-btn">Spark</span> 
 
     ---
-    AI-powered competitor analysis platform. 
+    Designed an AI RAG system to analyze ~3 million tweets, understanding social media customer support. Optimized Python pipeline by converting it to Spark, reducing processing time from 2 hours to 5mins! Built a user-friendly web interface for the tool using Streamlit.
 
     
     
@@ -111,7 +111,7 @@
     <span class="tool-btn">OpenCV</span> <span class="tool-btn">YOLOv8</span> <span class="tool-btn">Deep Learning</span> <span class="tool-btn">Python</span><span class="tool-btn">Data Augmentation</span><span class="tool-btn">Dataset Generation</span>
 
     ---
-    Real-time object detection using ML.  
+    Built a real-time object detection system at BARC Robotics using YOLOv8 and OpenCV. Calibrated cameras for position measurement and improved accuracy by training on real and synthetic images.
 
     
     ---
@@ -125,7 +125,7 @@
     <span class="tool-btn">Azure</span> <span class="tool-btn">Databricks</span> <span class="tool-btn">ETL</span> <span class="tool-btn">ADLS Gen2</span><span class="tool-btn">Data Lake</span><span class="tool-btn">Spark</span>
 
     ---
-    Data lake and ETL pipeline on Azure.  
+    A modern data platform on Azure cloud that processes e-commerce data through automated pipelines. Azure Data Factory and Databricks transform raw data into clean, organized layers. Data marts implemented through DBT.
     
     ---
     [View Project](azure_data_lake_etl.md)

@@ -1,6 +1,6 @@
 site_name: Pratham Kamble
 nav:
-    - Home: index.md
+    - All Projects : index.md
     - Projects: 
       - "Zaika: A Food Ordering App" : zaika.md
       - "Food Fiesta: Landing Website" : ff.md

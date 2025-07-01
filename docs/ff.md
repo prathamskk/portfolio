@@ -27,7 +27,7 @@ HTML, CSS, Javascript, SASS, PARCEL, Bootstrap, JQuery
 
 
 <video controls autoplay muted>
-<source src="/live_now.mp4" type="video/mp4">
+<source src="../live_now.mp4" type="video/mp4">
 </video>
 
 ---
