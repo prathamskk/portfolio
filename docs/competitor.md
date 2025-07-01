@@ -138,6 +138,10 @@ Once everything was working, I evaluated the system:
 
 ---
 
+??? Note "View Full Report Here"
+    ![competitor ai tool report](../competitor.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
+
+
 # Contact Me
 
 - [☎️: +44 78189 61950](tel:+447818961950)
