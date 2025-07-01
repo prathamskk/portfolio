@@ -139,7 +139,7 @@ The dataset may also introduce potential bias due to omitted variables, resultin
 ---
 
 ??? Note "View Full Report Here"
-    ![udemy report](/udemy.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
+    ![udemy report](../udemy.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
 
 
 

@@ -92,7 +92,7 @@ customer's next order
 
 
 ??? Note "View Full Report Here"
-    ![instacart report](/instacart.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
+    ![instacart report](../instacart.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
 
 
 
