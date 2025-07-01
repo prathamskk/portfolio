@@ -23,7 +23,7 @@ Led **3 Junior Developers** for development of this website.
 ### Tech Stack
 HTML, CSS, Javascript, SASS, PARCEL, Bootstrap, JQuery
 
-![food fiesta website teaser](/zaika_website.jpg)
+![food fiesta website teaser](../zaika_website.jpg)
 
 
 <video controls autoplay muted>
