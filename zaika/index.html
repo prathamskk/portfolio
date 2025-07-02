@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href=".." rel="prev"/>
+<link href="../ff/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
+<title>Zaika: A Food Ordering App - Pratham Kamble</title>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#zaika">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Pratham Kamble" class="md-header__button md-logo" data-md-component="logo" href=".." title="Pratham Kamble">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Pratham Kamble
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Zaika: A Food Ordering App
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Pratham Kamble" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Pratham Kamble">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Pratham Kamble
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    All Projects
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Projects
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Zaika: A Food Ordering App
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Zaika: A Food Ordering App
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zaika">
+<span class="md-ellipsis">
+      Zaika
+    </span>
+</a>
+<nav aria-label="Zaika" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#achievements">
+<span class="md-ellipsis">
+      Achievements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tech-stack">
+<span class="md-ellipsis">
+      Tech Stack
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contact-me">
+<span class="md-ellipsis">
+      Contact Me
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore-my-other-projects">
+<span class="md-ellipsis">
+      Explore My Other Projects
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ff/">
+<span class="md-ellipsis">
+    Food Fiesta: Landing Website
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../learnsbar/">
+<span class="md-ellipsis">
+    LearnSBAR: Training Platform
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../instacart/">
+<span class="md-ellipsis">
+    Instacart Reorder Prediction
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../udemy/">
+<span class="md-ellipsis">
+    Udemy Enrollment Prediction
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../slt/">
+<span class="md-ellipsis">
+    SLT: Social Listening Tool
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../competitor/">
+<span class="md-ellipsis">
+    AI Competitor Intelligence Tool
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../real_time_object_detection/">
+<span class="md-ellipsis">
+    Real Time Object Detection
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../azure_data_lake_etl/">
+<span class="md-ellipsis">
+    Azure Data Lake + ETL Pipeline
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contact/">
+<span class="md-ellipsis">
+    Contact Me
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zaika">
+<span class="md-ellipsis">
+      Zaika
+    </span>
+</a>
+<nav aria-label="Zaika" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#achievements">
+<span class="md-ellipsis">
+      Achievements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tech-stack">
+<span class="md-ellipsis">
+      Tech Stack
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contact-me">
+<span class="md-ellipsis">
+      Contact Me
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore-my-other-projects">
+<span class="md-ellipsis">
+      Explore My Other Projects
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Zaika: A Food Ordering App</h1>
+<div><div class="admonition abstract">
+<p class="admonition-title">About Me</p>
+<p>Pratham Kamble</p>
+<p><em>London, UK</em></p>
+<p>Tech + Data Science = Me.</p>
+<ul>
+<li>
+<p><strong>I drive meaningful outcomes</strong> with every project I touch.</p>
+</li>
+<li>
+<p><strong>I simplify the complex</strong> so everyone can grasp it.</p>
+</li>
+<li>
+<p>I create clear, beautiful data visuals.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<h2 id="zaika">Zaika</h2>
+<p>A food ordering app for my college festival</p>
+<h3 id="achievements">Achievements</h3>
+<p>In a single day </p>
+<p><strong>600+</strong> Users signups</p>
+<p><strong>800+</strong> Orders </p>
+<h3 id="tech-stack">Tech Stack</h3>
+<p>FRONTEND: React, Vite, Material UI, Javascript</p>
+<p>BACKEND: Firebase , Firestore, Cloud Functions, Firebase Authentication,  App Check, </p>
+<video autoplay="" controls="" muted="">
+<source src="../zaika_how_to_app.mp4" type="video/mp4"/>
+</video>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../zaika_teaser.jpg"><img alt="zaika teaser" src="../zaika_teaser.jpg"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../zaika_usage_thumbnail.jpg"><img alt="zaika how to use thumbnail" src="../zaika_usage_thumbnail.jpg"/></a></p>
+<hr/>
+<h2 id="contact-me">Contact Me</h2>
+<p><a href="tel:+447818961950">☎️: +44 78189 61950</a></p>
+<p><a href="mailto:prathamskk@gmail.com">📧: prathamskk@gmail.com</a></p>
+<p><a href="https://www.linkedin.com/in/prathamskk/">Linkedin: www.linkedin.com/in/prathamskk/</a></p>
+<hr/>
+<h2 id="explore-my-other-projects">Explore My Other Projects</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../slt_banner.png"><img alt="Project banner" src="../slt_banner.png" style="width:100%;height:120px;object-fit:cover;"/></a>
+<strong>SLT: Social Listening Tool</strong> </p>
+<p><span class="tool-btn">Web Scraping</span> <span class="tool-btn">BigQuery</span> <span class="tool-btn">Data Pipeline</span> <span class="tool-btn">Topic Modelling</span><span class="tool-btn">Looker</span><span class="tool-btn">K-Means</span><span class="tool-btn">GCP</span><span class="tool-btn">Vertex AI</span><span class="tool-btn">Gemini</span></p>
+<hr/>
+<p>A powerful tool built for Sense Worldwide, an innovation consulting company, that collects and analyzes social media conversations to identify trends and patterns, presenting key findings through easy-to-use interactive charts and reports.</p>
+<hr/>
+<p><a href="../slt/">View Project</a></p>
+</li>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../zaika_usage_thumbnail.jpg"><img alt="zaika teaser" src="../zaika_usage_thumbnail.jpg" style="width:100%;height:120px;object-fit:cover;"/></a>
+<strong>Zaika: A Food Ordering App</strong> </p>
+<p><span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Firebase</span> <span class="tool-btn">NoSQL</span><span class="tool-btn">GCP</span></p>
+<hr/>
+<p>A food ordering app that served 800+ orders and onboarded 600+ users in a single day, featuring real-time order tracking for our college festival.</p>
+<hr/>
+<p><a href="./">View Project</a></p>
+</li>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../zaika_website.jpg"><img alt="Food Fiesta website" src="../zaika_website.jpg" style="width:100%;height:120px;object-fit:cover;"/></a></p>
+<p><strong>Food Fiesta: Landing Website</strong></p>
+<p><span class="tool-btn">HTML</span> <span class="tool-btn">CSS</span> <span class="tool-btn">Javascript</span> <span class="tool-btn">Parcel</span><span class="tool-btn">Bootstrap</span></p>
+<hr/>
+<p>A Vibrant website promoting our college's Food Fiesta event and our new food ordering app, with details about the festival, featured food items, and easy ways to order through the app.</p>
+<hr/>
+<p><a href="../ff/">View Project</a></p>
+</li>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../instacart_banner.png"><img alt="Project banner" src="../instacart_banner.png" style="width:100%;height:120px;object-fit:cover;"/></a>
+<strong>Instacart Reorder Prediction</strong></p>
+<p><span class="tool-btn">XGBoost</span> <span class="tool-btn">EDA</span> <span class="tool-btn">Python</span> <span class="tool-btn">Data Visualization</span><span class="tool-btn">Machine Learning</span> </p>
+<hr/>
+<p>Leveraged XGBoost and customer purchase history to predict product reorder probability with 70% accuracy, analyzing 3 million orders and 50,000 products to help stores manage inventory better and improve the shopping experience.</p>
+<hr/>
+<p><a href="../instacart/">View Project</a></p>
+</li>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../learnsbar2.png"><img alt="LearnSBAR promo" src="../learnsbar2.png" style="width:100%;height:120px;object-fit:cover;"/></a>
+<strong>LearnSBAR: Training Platform</strong> </p>
+<p><span class="tool-btn">React</span> <span class="tool-btn">Vite</span> <span class="tool-btn">Typescript</span> <span class="tool-btn">AWS</span><span class="tool-btn">DynamoDB</span><span class="tool-btn">Voice Transcription</span></p>
+<hr/>
+<p>A training platform that helps nurses practice and improve their patient handoff communication skills through practice scenarios, instant feedback, and progress tracking. Features voice recording capabilities that automatically convert speech to text for easier review.</p>
+<hr/>
+<p><a href="../learnsbar/">View Project</a></p>
+</li>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../udemy_banner.png"><img alt="Project banner" src="../udemy_banner.png" style="width:100%;height:120px;object-fit:cover;"/></a>
+<strong>Udemy Enrollment Prediction</strong> </p>
+<p><span class="tool-btn">Web Scraping</span> <span class="tool-btn">Machine Learning</span> <span class="tool-btn">Python</span> <span class="tool-btn">Pandas</span><span class="tool-btn">Regression</span><span class="tool-btn">Random Forest</span><span class="tool-btn">Hyparameter Tuning</span> </p>
+<hr/>
+<p>Built a predictive model analyzing 9000+ Udemy courses to forecast enrollment numbers using features like course pricing, content length, and instructor ratings. Used Random Forest regression to help course creators optimize their offerings.</p>
+<hr/>
+<p><a href="../udemy/">View Project</a></p>
+</li>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../competitor_banner.png"><img alt="Project banner" src="../competitor_banner.png" style="width:100%;height:120px;object-fit:cover;"/></a>
+<strong>AI Competitor Intelligence Tool</strong> </p>
+<p><span class="tool-btn">RAG</span> <span class="tool-btn">Gen AI</span> <span class="tool-btn">LLM</span> <span class="tool-btn">MCP</span><span class="tool-btn">Streamlit</span><span class="tool-btn">RAG Evaluation</span><span class="tool-btn">Spark</span> </p>
+<hr/>
+<p>Designed an AI RAG system to analyze ~3 million tweets, understanding social media customer support. Optimized Python pipeline by converting it to Spark, reducing processing time from 2 hours to 5mins! Built a user-friendly web interface for the tool using Streamlit.</p>
+<hr/>
+<p><a href="../competitor/">View Project</a></p>
+</li>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../objectdetection.png"><img alt="Project banner" src="../objectdetection.png" style="width:100%;height:120px;object-fit:cover;"/></a>
+<strong>Real Time Object Detection</strong> </p>
+<p><span class="tool-btn">OpenCV</span> <span class="tool-btn">YOLOv8</span> <span class="tool-btn">Deep Learning</span> <span class="tool-btn">Python</span><span class="tool-btn">Data Augmentation</span><span class="tool-btn">Dataset Generation</span></p>
+<hr/>
+<p>Built a real-time object detection system at BARC Robotics using YOLOv8 and OpenCV. Calibrated cameras for position measurement and improved accuracy by training on real and synthetic images.</p>
+<hr/>
+<p><a href="../real_time_object_detection/">View Project</a></p>
+</li>
+<li>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../azure_banner.png"><img alt="Project banner" src="../azure_banner.png" style="width:100%;height:120px;object-fit:cover;"/></a>
+<strong>Azure Data Lake + ETL Pipeline</strong> </p>
+<p><span class="tool-btn">Azure</span> <span class="tool-btn">Databricks</span> <span class="tool-btn">ETL</span> <span class="tool-btn">ADLS Gen2</span><span class="tool-btn">Data Lake</span><span class="tool-btn">Spark</span></p>
+<hr/>
+<p>A modern data platform on Azure cloud that processes e-commerce data through automated pipelines. Azure Data Factory and Databricks transform raw data into clean, organized layers. Data marts implemented through DBT.</p>
+<hr/>
+<p><a href="../azure_data_lake_etl/">View Project</a></p>
+</li>
+</ul>
+</div></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
