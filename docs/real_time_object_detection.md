@@ -143,3 +143,7 @@ ML + Computer Vision + GUI
 [📧: prathamskk@gmail.com](mailto:prathamskk@gmail.com)
 
 [LinkedIn: www.linkedin.com/in/prathamskk/](https://www.linkedin.com/in/prathamskk/)
+
+---
+
+[⬅️ Back to All Projects](index.md)

@@ -35,9 +35,9 @@ BACKEND: Firebase , Firestore, Cloud Functions, Firebase Authentication,  App Ch
 <source src="../zaika_how_to_app.mp4" type="video/mp4">
 </video>
 
-![zaika teaser](../zaika_teaser.jpg)
+![zaika teaser](zaika_teaser.jpg)
 
-![zaika how to use thumbnail](../zaika_usage_thumbnail.jpg)
+![zaika how to use thumbnail](zaika_usage_thumbnail.jpg)
 
 
 ---
@@ -52,3 +52,7 @@ BACKEND: Firebase , Firestore, Cloud Functions, Firebase Authentication,  App Ch
 [📧: prathamskk@gmail.com](mailto:prathamskk@gmail.com)
 
 [Linkedin: www.linkedin.com/in/prathamskk/](https://www.linkedin.com/in/prathamskk/)
+
+---
+
+[⬅️ Back to All Projects](index.md)

@@ -154,3 +154,7 @@ The dataset may also introduce potential bias due to omitted variables, resultin
 [📧: prathamskk@gmail.com](mailto:prathamskk@gmail.com)
 
 [Linkedin: www.linkedin.com/in/prathamskk/](https://www.linkedin.com/in/prathamskk/)
+
+---
+
+[⬅️ Back to All Projects](index.md)
