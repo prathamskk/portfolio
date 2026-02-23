@@ -1,0 +1,92 @@
+---
+
+import arrowCard from '../assets/arrow-card.svg'
+
+interface Props {
+  url: string;
+  frontmatter: any;
+}
+
+const { url, frontmatter } = Astro.props;
+---
+
+<a
+  href={url}
+  class="block bg-white p-4 sm:p-5 border-2 border-black transition-all duration-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)] sm:flex sm:flex-row sm:flex-wrap sm:gap-6 sm:items-start"
+>
+  <!-- Left: title + content only (no footer inside) -->
+  <div class="min-w-0 sm:flex-1 sm:min-w-0">
+    <div class="flex items-center justify-between gap-2 mb-3">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0">
+          <i class={`${frontmatter?.project_for?.icon ?? 'ri-code-line'} text-white text-base`}></i>
+        </div>
+        <span class="text-sm text-gray-600 font-medium">
+          {frontmatter?.project_for?.label ?? 'Personal Project'}
+        </span>
+      </div>
+      {frontmatter.pubDate && (
+        <span class="flex items-center gap-1 text-xs text-gray-500 flex-shrink-0">
+          <i class="ri-calendar-line"></i>
+          {frontmatter.pubDate}
+        </span>
+      )}
+    </div>
+
+    <div class="flex gap-3 items-start">
+      <h2 class="flex-1 min-w-0 line-clamp-3 text-lg sm:text-xl font-bold text-black leading-snug">
+        {frontmatter.title}
+      </h2>
+      <div class="w-24 h-20 sm:hidden rounded-lg border-2 border-gray-200 overflow-hidden flex-shrink-0">
+        <img
+          src={frontmatter?.image?.url}
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    {frontmatter.summary && (
+      <p class="line-clamp-2 text-sm text-gray-600 mt-2">
+        {frontmatter.summary}
+      </p>
+    )}
+  </div>
+
+  <!-- Right: large thumbnail (desktop only) -->
+  <div class="hidden sm:block sm:w-[160px] sm:h-[107px] sm:flex-shrink-0 rounded-lg border-2 border-gray-200 overflow-hidden">
+    <img
+      src={frontmatter?.image?.url}
+      alt=""
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <!-- Footer: full width below content + thumbnail on desktop -->
+  <div class="w-full flex flex-wrap items-center justify-between gap-2 mt-4 pt-3 border-t border-gray-100">
+    <div class="flex flex-wrap items-center gap-2 min-w-0">
+      {(frontmatter.techStack ?? []).slice(0, 3).map((tag: string) => (
+        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 border border-gray-200">
+          {tag}
+        </span>
+      ))}
+      {frontmatter.likes && (
+        <span class="flex items-center gap-1 text-xs text-gray-500">
+          <i class="ri-thumb-up-line"></i>
+          {frontmatter.likes}
+        </span>
+      )}
+      {frontmatter.comments && (
+        <span class="flex items-center gap-1 text-xs text-gray-500">
+          <i class="ri-chat-1-line"></i>
+          {frontmatter.comments}
+        </span>
+      )}
+    </div>
+    <div class="hidden sm:flex items-center gap-1 flex-shrink-0">
+      <span class="p-1.5 text-gray-400" aria-hidden="true"><i class="ri-bookmark-line text-lg"></i></span>
+      <span class="p-1.5 text-gray-400" aria-hidden="true"><i class="ri-more-fill text-lg"></i></span>
+      <img src={arrowCard.src} alt="arrow" width="25" class="p-1"/>
+    </div>
+  </div>
+</a>

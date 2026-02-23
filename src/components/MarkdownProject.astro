@@ -1,0 +1,81 @@
+---
+import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+
+import AppHeader from './Header.astro';
+import AppFooter from './Footer.astro';
+import CallToAction from './CallToAction.astro';
+import RelatedProjects from './RelatedProjects.astro';
+import OtherCorners from './OtherCorners.astro';
+
+const styleSheet = {
+    meta: 'text-gray-500 flex items-center gap-2',
+}
+
+const { frontmatter } = Astro.props;
+const techStack = frontmatter.techStack ?? [];
+
+// Load all projects and filter to same corner(s), excluding current
+const allProjects = Object.values(import.meta.glob<{ frontmatter: any; url: string }>('../pages/projects/*.md', { eager: true }));
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
+const currentCorners = frontmatter.corners ?? [];
+const relatedProjects = allProjects.filter((p: any) => {
+  const sameCorner = currentCorners.length && p.frontmatter?.corners?.some((c: string) => currentCorners.includes(c));
+  const notCurrent = (p.url ?? '').replace(/\/$/, '') !== currentPath;
+  return sameCorner && notCurrent;
+});
+---
+
+<Layout title={frontmatter.title}>
+
+<AppHeader />
+
+<section class="p-3">
+    <div class="max-w-7xl mx-auto mt-10 mb-30 grid justify-items-center gap-16 xl:gap-4 xl:grid-cols-[auto_1fr]">
+        <!-- Main content -->
+        <div class="max-w-3xl p-3 bg-white flex flex-col gap-7 border-3">
+
+                {frontmatter.image?.url && (
+                    <div class="w-full aspect-video border-2 overflow-hidden bg-gray-100">
+                        <img
+                            src={frontmatter.image.url}
+                            alt={frontmatter.image.alt ?? frontmatter.title}
+                            width={1260}
+                            height={708}
+                            class="w-full h-full object-cover object-center"
+                        />
+                    </div>
+                )}
+                <h1 class="title text-4xl font-black">{frontmatter.title}</h1>
+
+                <div class="flex flex-col">
+                    <div class="flex flex-wrap items-center gap-3 border-t border-b border-gray-100 mb-5 py-4">
+                        {frontmatter.pubDate && (
+                            <span class={styleSheet.meta}><i class="ri-calendar-line text-xl"></i> {frontmatter.pubDate}</span>
+                        )}
+                        {(frontmatter.techStack ?? []).map((tag: string) => (
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 border border-gray-200">
+                                  {tag}
+                                </span>
+                        ))}
+
+                    </div>
+                <div class="prose prose-lg max-w-none">
+                    <slot />
+                </div>
+            </div>
+        </div>
+        <!-- Related projects: stacks below on small screens, right column + sticky on xl -->
+        <aside class="mt-10 xl:mt-0 xl:sticky xl:top-24 self-start">
+            <RelatedProjects relatedProjects={relatedProjects} />
+        </aside>
+    </div>
+
+</section>
+
+
+<OtherCorners currentCorner={currentCorners[0]} />
+<CallToAction />
+<AppFooter />
+
+</Layout>

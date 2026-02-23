@@ -1,0 +1,50 @@
+---
+import Bars from "./Bars.astro"
+
+import svgUnderline from '../assets/underline.svg'
+import arrowCard from '../assets/arrow-card.svg'
+
+const work = [
+  { 
+    name: 'Analytics Corner', desc: `Explore projects in predictive modeling, marketing science, and business insights.`,
+    cover: `/projects/instacart/instacart_shap.png`,
+    href: '/analytics-corner'
+  },
+  { 
+    name: 'Tech Corner', desc: `Explore projects in big data pipelines, system architecture, and full-stack builds.`,
+    cover: `/projects/slt/slt_system_architecture.png`,
+    href: '/tech-corner'
+  },
+  { 
+    name: 'Creative Corner', desc: `Explore projects in visual storytelling, video production, and high-impact design.`,
+    cover: `/projects/zaika/zaika_usage_thumbnail.jpg`,
+    href: '/creative-corner'
+  }
+]
+---
+
+
+<section class="py-25 space-y-10 px-5" id="work">
+    <div class="max-w-md mx-auto relative ">
+      <h1 class="text-4xl font-medium text-center">My Work</h1>
+      <img src={svgUnderline.src} alt="arrow" width="140" class="absolute left-35 -bottom-2" />
+    </div>
+  
+    <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10"> 
+      {work.map(item => ( 
+        <a href={item.href} class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)]">
+          <div class="w-full h-[200px] overflow-hidden border-2">
+           <img src={item.cover} alt="" class="w-full h-full object-cover object-[center_55%]" />
+          </div>
+          <div class="space-y-1 pt-4">
+            <div class="flex pr-2">
+              <h2 class="text-xl font-medium flex-1">{item.name}</h2>
+              <img src={arrowCard.src} alt="arrow" width="25" />
+            </div>
+            <p class="mr-20">{item.desc}</p>
+          </div>
+          <Bars />
+        </a>
+      ))}
+    </div>
+</section>

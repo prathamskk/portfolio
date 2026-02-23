@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- P: stem (full height) + bowl (top half only) -->
+  <path d="M22 16h14v96H22V16z" fill="black"/>
+  <path d="M36 16h52v44H36V60z" fill="black"/>
+  <style>
+    path { fill: #000; }
+    @media (prefers-color-scheme: dark) {
+      path { fill: #FFF; }
+    }
+  </style>
+</svg>

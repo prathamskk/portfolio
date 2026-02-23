@@ -1,0 +1,38 @@
+---
+import '../styles/global.css'
+import Layout from "../layouts/Layout.astro";
+
+import AppHeader from '../components/Header.astro';
+import AppFooter from '../components/Footer.astro';
+import OtherCorners from '../components/OtherCorners.astro';
+import CornerProjectCard from '../components/CornerProjectCard.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+const allPosts = Object.values(import.meta.glob<{ frontmatter: any; url: string }>('./projects/*.md', { eager: true }));
+const techPosts = allPosts.filter(({ frontmatter }: any) => frontmatter?.corners?.includes('tech'));
+---
+
+<Layout title="Tech Corner">
+  <AppHeader />
+
+  <section class="py-40 px-1 sm:px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-15">
+        <h1 class="title text-5xl font-black">Tech Corner</h1>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        {techPosts.map(({ url, frontmatter }: any) => (
+          <CornerProjectCard
+            url={url}
+            frontmatter={frontmatter}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <OtherCorners currentCorner="tech" />
+  <CallToAction />
+  <AppFooter />
+</Layout>
