@@ -3,11 +3,13 @@ import logoStar from '../assets/logo-star.svg'
 import svgPinkStar from '../assets/pink-star.svg'
 import { author, reachOut } from '../sample'
 
+const base = import.meta.env.BASE_URL
+
 const links = [
     // { name: 'About', path: '/', target: '_self' },
-    { name: 'Analytics Corner', path: '/analytics-corner/', target: '_self' },
-    { name: 'Creative Corner', path: '/creative-corner/', target: '_self' },
-    { name: 'Tech Corner', path: '/tech-corner/', target: '_self' },
+    { name: 'Analytics Corner', path: `${base}analytics-corner/`, target: '_self' },
+    { name: 'Creative Corner', path: `${base}creative-corner/`, target: '_self' },
+    { name: 'Tech Corner', path: `${base}tech-corner/`, target: '_self' },
 ]
 
 const { pathname } = Astro.url
@@ -29,7 +31,7 @@ const { pathname } = Astro.url
     
         <nav class="flex w-full items-center p-2 md:p-0">
             <div class="flex-1 font-bold">
-                <a href="/" class="flex items-center gap-2 pl-3">
+                <a href={base} class="flex items-center gap-2 pl-3">
                     <img src={logoStar.src} alt="logo" width="26" /> {author.nickname}
                 </a>
             </div>

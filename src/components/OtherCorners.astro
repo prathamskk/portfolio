@@ -3,6 +3,8 @@ import Bars from "./Bars.astro"
 import svgUnderline from '../assets/underline.svg'
 import arrowCard from '../assets/arrow-card.svg'
 
+const base = import.meta.env.BASE_URL
+
 interface Props {
   currentCorner?: 'analytics' | 'tech' | 'creative';
 }
@@ -11,23 +13,23 @@ const { currentCorner } = Astro.props;
 const allCorners = [
   { 
     name: 'Analytics Corner', desc: `Explore projects in predictive modeling, marketing science, and business insights.`,
-    cover: `/projects/instacart/instacart_shap.png`,
-    href: '/analytics-corner'
+    cover: `${base}projects/instacart/instacart_shap.png`,
+    href: `${base}analytics-corner`
   },
   { 
     name: 'Tech Corner', desc: `Explore projects in big data pipelines, system architecture, and full-stack builds.`,
-    cover: `/projects/slt/slt_system_architecture.png`,
-    href: '/tech-corner'
+    cover: `${base}projects/slt/slt_system_architecture.png`,
+    href: `${base}tech-corner`
   },
   { 
     name: 'Creative Corner', desc: `Explore projects in visual storytelling, video production, and high-impact design.`,
-    cover: `/projects/zaika/zaika_usage_thumbnail.jpg`,
-    href: '/creative-corner'
+    cover: `${base}projects/zaika/zaika_usage_thumbnail.jpg`,
+    href: `${base}creative-corner`
   }
 ];
 
 const corners = currentCorner
-  ? allCorners.filter(item => item.href !== `/${currentCorner}-corner`)
+  ? allCorners.filter(item => item.href !== `${base}${currentCorner}-corner`)
   : allCorners;
 ---
 

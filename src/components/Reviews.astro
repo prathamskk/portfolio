@@ -1,13 +1,15 @@
 ---
 import svgNew from '../assets/new.svg'
 
+const base = import.meta.env.BASE_URL
+
 const testimonials = [
   {
     comment: `"He showcases ability to bridge theoretical knowledge with practical applications to real-world problems."`,
     author: {
       name: `Dr. Gopal Nanda`,
       pos: `Professor of Engineering Mathematics, SAKEC`,
-      pic: `/review/profile_photo_gopal.jpg`
+      pic: `${base}review/profile_photo_gopal.jpg`
     },
     cls: `rotate-2 -translate-y-10`
   },
@@ -16,7 +18,7 @@ const testimonials = [
     author: {
       name: `Milind Khairnar`,
       pos: `Professor of AI & Data Science, SAKEC`,
-      pic: `/review/profile_photo_milind.webp`
+      pic: `${base}review/profile_photo_milind.webp`
     },
     cls: `-rotate-2 -translate-x-10  z-5`
   },
@@ -25,7 +27,7 @@ const testimonials = [
     author: {
       name: `Leila Boushehri`,
       pos: `Data Scientist, Sense Worldwide`,
-      pic: `/review/profile_photo_leila.jpg`
+      pic: `${base}review/profile_photo_leila.jpg`
     },
     cls: `rotate-2 translate-x-5 z-5`
   },

@@ -14,6 +14,7 @@ const styleSheet = {
 
 const { frontmatter } = Astro.props;
 const techStack = frontmatter.techStack ?? [];
+const base = import.meta.env.BASE_URL;
 
 // Load all projects and filter to same corner(s), excluding current
 const allProjects = Object.values(import.meta.glob<{ frontmatter: any; url: string }>('../pages/projects/*.md', { eager: true }));
@@ -38,7 +39,7 @@ const relatedProjects = allProjects.filter((p: any) => {
                 {frontmatter.image?.url && (
                     <div class="w-full aspect-video border-2 overflow-hidden bg-gray-100">
                         <img
-                            src={frontmatter.image.url}
+                            src={`${base}${frontmatter.image.url.replace(/^\//, '')}`}
                             alt={frontmatter.image.alt ?? frontmatter.title}
                             width={1260}
                             height={708}
