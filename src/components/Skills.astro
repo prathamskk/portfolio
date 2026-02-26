@@ -2,16 +2,25 @@
 const base = import.meta.env.BASE_URL
 
 const skills = [
-  'Brand Strategy',
-  'Data Analytics',
+  'Digital Marketing',
+  'UI/UX',
+  'Digital Advertising',
   'Search Engine Optimization (SEO)',
-  'Social Media Strategy',
   'Content Creation',
-  'Paid Advertising',
   'Web Development',
+  'Data Analytics',
 ]
 
 const toolGroups = [
+  
+{
+    name: 'Ads & Growth',
+    tools: [
+      { name: 'Meta Ads', logo: { src: `${base}logos/meta-logo.jpg`, alt: 'Meta' } },
+      { name: 'Google Ads', logo: { src: `${base}logos/google_ads-icon.svg`, alt: 'Google Ads' } },
+      { name: 'HubSpot', logo: { src: `${base}logos/hubspot-logo.png`, alt: 'HubSpot' } },
+    ],
+  },
   {
     name: 'Marketing Strategy',
     tools: [
@@ -34,13 +43,6 @@ const toolGroups = [
       { name: 'PowerBI', logo: { src: `${base}logos/powerbi-logo.svg`, alt: 'Power BI' } },
       { name: 'Google Analytics', logo: { src: `${base}logos/google_analytics-icon.svg`, alt: 'Google Analytics' } },
       { name: 'Microsoft 365', logo: { src: `${base}logos/microsoft-365-logo.jpg`, alt: 'Microsoft 365' } },
-    ],
-  },
-  {
-    name: 'Ads & Growth',
-    tools: [
-      { name: 'Meta Ads', logo: { src: `${base}logos/meta-logo.jpg`, alt: 'Meta' } },
-      { name: 'Google Ads', logo: { src: `${base}logos/google_ads-icon.svg`, alt: 'Google Ads' } },
     ],
   },
 ]
