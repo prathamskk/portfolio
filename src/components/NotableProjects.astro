@@ -1,0 +1,395 @@
+---
+import svgUnderline from '../assets/underline.svg'
+
+const base = import.meta.env.BASE_URL
+
+const ecell = {
+  title: 'Digital Content & Social Media',
+  summary:
+    "E-Cell SAKEC is a student-led nonprofit organisation promoting entrepreneurship among students. In this role, I developed and launched digital content strategies for multiple events (Project Pillar, Food Fiesta), helping to establish our organisation's digital presence and expand awareness.",
+  objectives:
+    'Led end-to-end web content management, including content production, website administration, search engine optimisation (SEO), and performance tracking to drive brand awareness and engagement.',
+  impact: [
+    { label: 'Attendees Gathered', value: '600+', icon: '👥' },
+    { label: 'Organic Search Ranking', value: 'Page 1', icon: '📈' },
+    { label: 'Digital Formats Launched', value: '3+', icon: '🎬' },
+    { label: 'Digital Presence Established', value: '100%', icon: '✅' },
+  ],
+  image: `${base}projects/zaika/zaika_website.jpg`,
+}
+
+const content_creation = {
+  title: 'Content Creation',
+  summary: 'Beyond digital content strategy, I actively supported a range of content creation activities, including editing videos, graphic design, and branding to increase social media engagement and reach, ultimately optimising event participation.',
+  assets: {
+    howTo: { label: 'How-to app walkthrough', src: 'projects/zaika/zaika_how_to_app.mp4' },
+    teaser: { label: 'Fast-paced promotional teaser edit for social media.', file: 'zaika_teaser.jpg' },
+    usage: { label: 'Usage thumbnail for in-app ordering journey.', file: 'zaika_usage_thumbnail.jpg' },
+    websiteLive: { label: 'Website is live', file: 'website_is_live.webp' },
+    uiVideo: { label: 'Step-by-step instructional UI video for user onboarding.', src: 'projects/ff/live_now.mp4' },
+  },
+}
+
+const bia = {
+  title: 'Digital Advertising & Marketing Campaign',
+  summary:
+    'Boston Institute of Analytics is a training institute specializing in data science. In this role, I managed the digital lead generation strategy for their Mumbai branch, focusing on establishing a market presence and filling enrollment quotas for their technical programs.',
+  objectives:
+    'Launch & Lead Generation: campaign management, performance tracking, ads strategy and funnel design to generate qualified leads and convert.',
+  impact: [
+    { label: 'Cost Per Lead', value: '$2.01', icon: '👥' },
+    { label: 'Organic Search Ranking', value: 'Page 1', icon: '📈' },
+    { label: 'Cohort Booked', value: '100%', icon: '✅' },
+    { label: 'Digital Presence Established', value: '100%', icon: '✅' },
+  ],
+  image: `${base}BIA_marketing_mockup.png`,
+  logo: `${base}company/boston-institute-of-analytics.jpg`,
+}
+
+const senseworldwide = {
+  title: 'Digital Content & Social Media',
+  summary:
+    "Sense Worldwide is a London-based innovation and brand strategy consultancy. In this role, I developed a data collection pipeline to improve coverage and speed of social media market research",
+  objectives:
+    '',
+  impact: [
+    { label: 'Attendees Gathered', value: '600+', icon: '👥' },
+    { label: 'Organic Search Ranking', value: 'Page 1', icon: '📈' },
+    { label: 'Digital Formats Launched', value: '3+', icon: '🎬' },
+    { label: 'Digital Presence Established', value: '100%', icon: '✅' },
+  ],
+  image: `${base}social-listening-tool-slides-mockup.png`,
+  logo: `${base}company/sense-worldwide.jpg`,
+}
+
+const inspirus = {
+  title: 'Website Design and SEO',
+  summary:
+    "Inspirus Education is an overseas higher-education coaching and test-prep institute in Mumbai. I developed the company's website, ensuring it was fast, responsive and optimised for organic growth.",
+  objectives:
+    'Website design, build and ongoing SEO: technical foundation and content structure improve visibility and conversions.',
+  impact: [
+    { label: 'Organic Search', value: 'Page 1', icon: '📈' },
+    { label: 'Lighthouse Score', value: '90+', icon: '⚡' },
+    { label: 'Fully Responsive', value: 'Yes', icon: '📱' },
+    { label: 'SEO Optimised', value: 'Yes', icon: '✅' },
+  ],
+  image: `${base}inspirus-website-mockup.png`,
+  logo: `${base}company/inspirus-education.jpg`,
+}
+
+const learnsbar = {
+  title: 'UX Design',
+  summary:
+    'UI/UX mockups and user flows for an app built as part of an undergrad group project. Focused on clarity and usability.',
+  objectives:
+    '',
+  image: `${base}learnsbar-mockup.png`,
+}
+
+const marketing_analytics = {
+  title: 'Marketing Analytics (UCL)',
+  summary:
+    'A Term 1 module from my Business Analytics MSc at UCL. Here I learnt how to calculate marketing metrics, design causal experiments, and apply machine learning for customer segmentation and targeting.',
+  objectives:
+    'Apply statistical and econometric methods to marketing data; interpret results and recommend actions.',
+  topics: ['Customer Lifetime Value (CLV)', 'Segmentation', 'Predictive Modelling', 'Causal Inference (RDD, DiD, & IV)'],
+  image: `${base}r_studio_mockup.png`,
+}
+---
+
+<section class="py-20 px-5" id="notable-projects">
+  <div class="max-w-md mx-auto mb-10 relative">
+    <h1 class="text-4xl font-medium text-center">notable projects.</h1>
+    <img src={svgUnderline.src} alt="underline" width="140" class="absolute left-35 -bottom-2" />
+  </div>
+
+  <div class="max-w-5xl mx-auto border-2 border-black bg-white shadow-[8px_8px_0_rgba(0,0,0,0.3)] p-6 space-y-8">
+
+    <!-- E-Cell -->
+    <div class="space-y-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{ecell.title}</h2>
+        <div>
+          <div class="float-left mr-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-black bg-black flex items-center justify-center overflow-hidden">
+            <img src={`${base}company/ecell-logo.png`} alt="E-Cell SAKEC logo" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-sm sm:text-base leading-relaxed">{ecell.summary}</p>
+          <div class="clear-both"></div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-[1fr_2fr] gap-6 items-stretch">
+        <div class="border-2 border-black bg-white shadow-[6px_6px_0_rgba(0,0,0,0.25)] overflow-hidden min-h-0">
+          <img src={ecell.image} alt="" class="w-full h-full object-cover aspect-square object-center" />
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold">Digital Content Objectives</h3>
+            <p class="space-y-1 text-sm">{ecell.objectives}</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-xl font-semibold">The impact.</h3>
+            <div class="grid grid-cols-2 gap-3">
+              {ecell.impact.map((item) => (
+                <div class="relative border-2 border-black bg-white p-3 flex flex-col shadow-[4px_4px_0_rgba(0,0,0,0.25)]">
+                  <span class="absolute top-3 right-4 text-3xl text-emerald-500 leading-none">↑</span>
+                  <div class="text-xl mb-1">{item.icon}</div>
+                  <p class="text-lg font-semibold leading-none">{item.value}</p>
+                  <p class="text-xs mt-1 text-black/80">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-4 h-px bg-black/15"></div>
+
+    <!-- Content Creation -->
+    <div class="space-y-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{content_creation.title}</h2>
+        <p class="text-sm sm:text-base leading-relaxed">{content_creation.summary}</p>
+      </div>
+      <div class="grid grid-cols-3 gap-1 sm:gap-4">
+        <div class="border-2 border-black bg-white shadow-[4px_4px_0_rgba(0,0,0,0.25)] overflow-hidden col-span-3">
+          <video
+            src={`${base}${content_creation.assets.howTo.src}`}
+            aria-label={content_creation.assets.howTo.label}
+            class="w-full h-full object-cover"
+            autoplay muted loop controls playsinline preload="auto"
+          />
+        </div>
+        <div class="space-y-2">
+          <div class="border-2 border-black bg-white shadow-[4px_4px_0_rgba(0,0,0,0.25)] overflow-hidden">
+            <img src={`${base}projects/zaika/${content_creation.assets.teaser.file}`} alt={content_creation.assets.teaser.label} class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div class="space-y-2">
+          <div class="border-2 border-black bg-white shadow-[4px_4px_0_rgba(0,0,0,0.25)] overflow-hidden">
+            <video
+              src={`${base}${content_creation.assets.uiVideo.src}`}
+              aria-label={content_creation.assets.uiVideo.label}
+              class="w-full object-cover"
+              autoplay muted loop controls playsinline preload="metadata"
+            />
+          </div>
+        </div>
+        <div class="space-y-2">
+          <div class="border-2 border-black bg-white shadow-[4px_4px_0_rgba(0,0,0,0.25)] overflow-hidden">
+            <img src={`${base}projects/zaika/${content_creation.assets.usage.file}`} alt={content_creation.assets.usage.label} class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-4 h-px bg-black/15"></div>
+
+    <!-- BIA -->
+    <div class="space-y-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{bia.title}</h2>
+        <div>
+          <div class="float-left mr-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-black bg-white flex items-center justify-center overflow-hidden">
+            <img src={bia.logo} alt="" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-sm sm:text-base leading-relaxed">{bia.summary}</p>
+          <div class="clear-both"></div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-[2fr_2fr] gap-6 items-stretch">
+        <div class="bg-white overflow-hidden min-h-0 flex items-center justify-center">
+          <img src={bia.image} alt="BIA digital marketing mockup: Meta Ads Manager and Instagram ad creatives" class="w-full h-auto object-contain" />
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold">Objectives & role</h3>
+            <p class="space-y-1 text-sm">{bia.objectives}</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-xl font-semibold">The impact.</h3>
+            <div class="grid grid-cols-2 gap-3">
+              {bia.impact.map((item) => (
+                <div class="relative border-2 border-black bg-white p-3 flex flex-col shadow-[4px_4px_0_rgba(0,0,0,0.25)]">
+                  <span class="absolute top-3 right-4 text-3xl text-emerald-500 leading-none">↑</span>
+                  <div class="text-xl mb-1">{item.icon}</div>
+                  <p class="text-lg font-semibold leading-none">{item.value}</p>
+                  <p class="text-xs mt-1 text-black/80">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-4 h-px bg-black/15"></div>
+
+    <!-- Sense Worldwide: overlapping layout, no tilt, original ratios -->
+    <div class="space-y-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{senseworldwide.title}</h2>
+        <div>
+          <div class="float-left mr-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-black bg-white flex items-center justify-center overflow-hidden">
+            <img src={senseworldwide.logo} alt="" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-sm sm:text-base leading-relaxed">{senseworldwide.summary}</p>
+          <div class="clear-both"></div>
+        </div>
+      </div>
+
+      <div class="w-full flex items-center justify-center overflow-hidden">
+        <img
+          src={senseworldwide.image}
+          alt="Social listening tool mockup and slide overview"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+
+      <div class="w-full flex items-center justify-center overflow-hidden mt-4">
+        <img
+          src={`${base}social_listening_diagram.png`}
+          alt="Social listening diagram combining phones, data table, and charts"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+
+    <div class="my-4 h-px bg-black/15"></div>
+
+    <!-- Inspirus -->
+    <div class="space-y-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{inspirus.title}</h2>
+        <div>
+          <div class="float-left mr-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-black bg-white flex items-center justify-center overflow-hidden">
+            <img src={inspirus.logo} alt="" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-sm sm:text-base leading-relaxed">{inspirus.summary}</p>
+          <div class="clear-both"></div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-[1fr_2fr] gap-6 items-stretch">
+        <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
+          <img src={inspirus.image} alt="Inspirus website mockup" class="w-full h-auto object-contain" />
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold">Objectives & role</h3>
+            <p class="space-y-1 text-sm">{inspirus.objectives}</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-xl font-semibold">The impact.</h3>
+            <div class="grid grid-cols-2 gap-3">
+              {inspirus.impact.map((item) => (
+                <div class="relative border-2 border-black bg-white p-3 flex flex-col shadow-[4px_4px_0_rgba(0,0,0,0.25)]">
+                  <span class="absolute top-3 right-4 text-3xl text-emerald-500 leading-none">↑</span>
+                  <div class="text-xl mb-1">{item.icon}</div>
+                  <p class="text-lg font-semibold leading-none">{item.value}</p>
+                  <p class="text-xs mt-1 text-black/80">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-4 h-px bg-black/15"></div>
+
+    <!-- LearnSbar -->
+    <div class="space-y-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{learnsbar.title}</h2>
+        <p class="text-sm sm:text-base leading-relaxed">{learnsbar.summary}</p>
+      </div>
+      <div class="grid grid-cols-[1fr_2fr] gap-6 items-stretch">
+        <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
+          <img src={learnsbar.image} alt="LearnSbar app mockup" class="w-full h-auto object-contain" />
+        </div>
+        <div class="flex flex-col gap-6">
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="border-2 border-black bg-white shadow-[6px_6px_0_rgba(0,0,0,0.25)] overflow-hidden">
+              <img
+                src={`${base}learnsbar-image-1.png`}
+                alt="LearnSbar screen 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="border-2 border-black bg-white shadow-[6px_6px_0_rgba(0,0,0,0.25)] overflow-hidden">
+              <img
+                src={`${base}learnsbar-image-2.png`}
+                alt="LearnSbar screen 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-4 h-px bg-black/15"></div>
+
+    <!-- Marketing Analytics -->
+    <div class="space-y-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{marketing_analytics.title}</h2>
+        <p class="text-sm sm:text-base leading-relaxed">{marketing_analytics.summary}</p>
+      </div>
+      <div class="grid md:grid-cols-[1fr_2fr] gap-6 items-stretch">
+        <div class="space-y-4">
+          <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
+            <img src={`${base}marketing-analytics-syllabus.svg`} alt="Marketing analytics module syllabus" class="w-full h-auto object-contain" />
+          </div>
+
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold">Objectives</h3>
+            <p class="space-y-1 text-sm">{marketing_analytics.objectives}</p>
+          </div>
+          <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
+            <img src={`${base}marketing-analytics-venn.png`} alt="Marketing analytics venn diagram" class="w-full h-auto object-contain" />
+          </div>
+
+
+          <div class="space-y-3">
+            <h3 class="text-xl font-semibold">Topics covered</h3>
+            <ul class="flex flex-wrap gap-2">
+              {marketing_analytics.topics.map((topic) => (
+                <li class="border-2 border-black bg-white px-3 py-1.5 text-sm shadow-[3px_3px_0_rgba(0,0,0,0.2)]">{topic}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const section = document.querySelector('#notable-projects')
+  if (section) {
+    const videos = section.querySelectorAll('video')
+    function tryPlayVideos() {
+      videos.forEach((video) => {
+        video.play().catch(() => {})
+      })
+    }
+    function tryPlayWhenReady() {
+      videos.forEach((video) => {
+        const play = () => video.play().catch(() => {})
+        if (video.readyState >= 2) play()
+        else video.addEventListener('canplay', play, { once: true })
+      })
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', tryPlayWhenReady)
+    else tryPlayWhenReady()
+    const once = { once: true }
+    section.addEventListener('click', tryPlayVideos, once)
+    section.addEventListener('touchstart', tryPlayVideos, once)
+  }
+</script>

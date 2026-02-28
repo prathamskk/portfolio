@@ -7,8 +7,8 @@ const author = {
 };
 
 const reachOut = {
-  linkedin_title: `via LinkedIn`,
-  email_title: `via Mail`,
+  linkedin_title: `connect on LinkedIn`,
+  email_title: `email me`,
   linkedin: `https://www.linkedin.com/in/prathamskk`,
   email: "mailto:prathamskk@gmail.com",
 };
