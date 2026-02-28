@@ -270,11 +270,11 @@ const marketing_analytics = {
           <div class="clear-both"></div>
         </div>
       </div>
-      <div class="grid md:grid-cols-[1fr_2fr] gap-6 items-stretch">
+      <div class="grid gap-6 items-stretch">
         <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
           <img src={inspirus.image} alt="Inspirus website mockup" class="w-full h-auto object-contain" />
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="grid md:grid-cols-2 gap-6">
           <div class="space-y-2">
             <h3 class="text-lg font-semibold">Objectives & role</h3>
             <p class="space-y-1 text-sm">{inspirus.objectives}</p>
@@ -304,13 +304,13 @@ const marketing_analytics = {
         <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{learnsbar.title}</h2>
         <p class="text-sm sm:text-base leading-relaxed">{learnsbar.summary}</p>
       </div>
-      <div class="grid grid-cols-[1fr_2fr] gap-6 items-stretch">
+      <div class="grid grid-cols-[1fr_2fr] md:grid-cols-2 gap-6 items-stretch">
         <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
-          <img src={learnsbar.image} alt="LearnSbar app mockup" class="w-full h-auto object-contain" />
+          <img src={learnsbar.image} alt="LearnSbar app mockup" class="w-full md:w-1/2 h-auto object-contain" />
         </div>
         <div class="flex flex-col gap-6">
 
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid  gap-4">
             <div class="border-2 border-black bg-white shadow-[6px_6px_0_rgba(0,0,0,0.25)] overflow-hidden">
               <img
                 src={`${base}learnsbar-image-1.png`}
@@ -338,23 +338,21 @@ const marketing_analytics = {
         <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{marketing_analytics.title}</h2>
         <p class="text-sm sm:text-base leading-relaxed">{marketing_analytics.summary}</p>
       </div>
-      <div class="grid md:grid-cols-[1fr_2fr] gap-6 items-stretch">
+      <div class="grid gap-6 items-stretch">
         <div class="space-y-4">
           <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
             <img src={`${base}marketing-analytics-syllabus.svg`} alt="Marketing analytics module syllabus" class="w-full h-auto object-contain" />
           </div>
 
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex flex-col gap-6"> 
+            
           <div class="space-y-2">
             <h3 class="text-lg font-semibold">Objectives</h3>
             <p class="space-y-1 text-sm">{marketing_analytics.objectives}</p>
           </div>
-          <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
-            <img src={`${base}marketing-analytics-venn.png`} alt="Marketing analytics venn diagram" class="w-full h-auto object-contain" />
-          </div>
-
-
+          
           <div class="space-y-3">
             <h3 class="text-xl font-semibold">Topics covered</h3>
             <ul class="flex flex-wrap gap-2">
@@ -363,6 +361,13 @@ const marketing_analytics = {
               ))}
             </ul>
           </div>
+          
+        </div>
+          <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
+            <img src={`${base}marketing-analytics-venn.png`} alt="Marketing analytics venn diagram" class="w-full h-auto object-contain" />
+          </div>
+
+
         </div>
       </div>
     </div>
