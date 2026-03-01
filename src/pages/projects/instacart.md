@@ -29,7 +29,7 @@ customer's next order
 
 **1. Huge Dataset: 1.3 million orders, 50,000 products, 3.4 million past total orders**  
 
-![Dataset Overview](/projects/instacart/instacart_dataset_description.png)
+![Dataset Overview](../../assets/projects/instacart/instacart_dataset_description.png)
 
 ---
 
@@ -37,55 +37,55 @@ customer's next order
 
 **2. Bananas are the most reordered product—everyone loves bananas!**  
 
-![Banana Popularity Chart](/projects/instacart/banana_pop_chart.png)
+![Banana Popularity Chart](../../assets/projects/instacart/banana_pop_chart.png)
 
 ---
 
 **3. Shopping peaks on weekends and between 10 AM–4 PM**  
 
-![Order Timing Chart](/projects/instacart/order_timing_chart.png)
+![Order Timing Chart](../../assets/projects/instacart/order_timing_chart.png)
 
 ---
 
 **4. Fresh fruits, vegetables, and dairy are the most frequently reordered aisles**  
 
-![Top Aisles Chart](/projects/instacart/top_aisles_chart.png)
+![Top Aisles Chart](../../assets/projects/instacart/top_aisles_chart.png)
 
 ---
 
 **5. Items added to the cart first are much more likely to be reordered**  
 
-![Add-to-Cart Order Chart](/projects/instacart/add_cart_order_chart.png)
+![Add-to-Cart Order Chart](../../assets/projects/instacart/add_cart_order_chart.png)
 
 ---
 
 **6. XGBoost model predicts reorders with 80% recall—very few missed repeat buys**  
 
-![XGBoost Performance](/projects/instacart/instacart_model_xgboost.png)
+![XGBoost Performance](../../assets/projects/instacart/instacart_model_xgboost.png)
 
 ---
 
 **7. Feature engineering (user habits + product loyalty) boosted accuracy to 71%**  
 
-![Feature Engineering Impact](/projects/instacart/instacart_optimized_xgboost.png)
+![Feature Engineering Impact](../../assets/projects/instacart/instacart_optimized_xgboost.png)
 
 ---
 
 **8. Neural network was slower and didn't beat XGBoost for this task**  
 
-![Model Comparison](/projects/instacart/instacart_nn_xgboost.png)
+![Model Comparison](../../assets/projects/instacart/instacart_nn_xgboost.png)
 
 ---
 
 **9. SHAP analysis: Product name, reorder history, and cart position are most important**  
 
-![SHAP Feature Importance](/projects/instacart/instacart_shap.png)
+![SHAP Feature Importance](../../assets/projects/instacart/instacart_shap.png)
 
 ---
 
 **10. Model struggles most with "sometimes" products—not always or never reordered**  
 
-![Error Analysis](/projects/instacart/instacart_error_analysis.jpg)
+![Error Analysis](../../assets/projects/instacart/instacart_error_analysis.jpg)
 
 ---
 

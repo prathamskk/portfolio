@@ -97,7 +97,7 @@ To make the platform scalable, cost-effective, and user-friendly, I broke it int
 - **Visualization:** Looker Studio dashboards for exploring topic clusters, sentiment trends, and more
 
 
-![System Architecture](/projects/slt/slt_system_architecture.png)
+![System Architecture](../../assets/projects/slt/slt_system_architecture.png)
 
 
 ---
@@ -146,10 +146,10 @@ I focused on making the tool genuinely useful and accessible for consultants:
 
 ### Screenshots
 
-![Control Centre](/projects/slt/slt_1.png)
-![Dashboard 1](/projects/slt/slt_2.png)
-![Dashboard 2](/projects/slt/slt_3.png)
-![Dashboard 3](/projects/slt/slt_4.png)
+![Control Centre](../../assets/projects/slt/slt_1.png)
+![Dashboard 1](../../assets/projects/slt/slt_2.png)
+![Dashboard 2](../../assets/projects/slt/slt_3.png)
+![Dashboard 3](../../assets/projects/slt/slt_4.png)
 
 ---
 

@@ -36,11 +36,11 @@ First, I designed the system's architecture. I decided to use two main AI agents
 
 This modular design allows each agent to focus on a specific task, while also enabling future expansion with more features or data sources.
 
-![Two Agents](/projects/competitor/competitor_two_agents.jpg)
+![Two Agents](../../assets/projects/competitor/competitor_two_agents.jpg)
 
 ![System Architecture](/projects/competitor/competitor_system_design.jpg)
 
-![MCP Architecture](/projects/competitor/competitor_mcp_architecture.jpg)
+![MCP Architecture](../../assets/projects/competitor/competitor_mcp_architecture.jpg)
 *System Architecture Diagram*
 
 ---
@@ -67,7 +67,7 @@ For each starting tweet, I built the full conversation by following the reply ch
 - Used **Gemini's embedding model** to convert each conversation into a vector (for semantic search).
 - Saved vectors in a special database (**PgVector**).
 
-![Example Conversation 1](/projects/competitor/competitor_example_one_conversation.jpg)
+![Example Conversation 1](../../assets/projects/competitor/competitor_example_one_conversation.jpg)
 *Instance of an identified conversation between a user and company (AppleSupport)*
 
 ![Threads Example](/projects/competitor/competitor_threads_example.jpg)
@@ -101,9 +101,9 @@ To make everything user-friendly, I built a dashboard using **Streamlit**:
     - Find competitors
 - Users can enter their own parameters and see results instantly.
 
-![Competitor Dashboard](/projects/competitor/competitor_competitor_dashboard.jpg)
+![Competitor Dashboard](../../assets/projects/competitor/competitor_competitor_dashboard.jpg)
 
-![Customer Dashboard](/projects/competitor/competitor_customer_dashboard.jpg)
+![Customer Dashboard](../../assets/projects/competitor/competitor_customer_dashboard.jpg)
 *Streamlit Dashboard*
 
 ---
@@ -120,7 +120,7 @@ Throughout the project, I followed best practices in software engineering:
 
 ![Docker](/projects/competitor/competitor_docker.jpg)
 
-![Logs](/projects/competitor/competitor_logs.jpg)
+![Logs](../../assets/projects/competitor/competitor_logs.jpg)
 
 ---
 

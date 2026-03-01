@@ -1,5 +1,23 @@
 ---
+import { Image } from 'astro:assets';
 import svgUnderline from '../assets/underline.svg'
+
+import imgEcellLogo from '../assets/company/ecell-logo.png';
+import imgZaikaWebsite from '../assets/projects/zaika/zaika_website.jpg';
+import imgZaikaTeaser from '../assets/projects/zaika/zaika_teaser.jpg';
+import imgZaikaUsage from '../assets/projects/zaika/zaika_usage_thumbnail.jpg';
+import imgBiaLogo from '../assets/company/boston-institute-of-analytics.jpg';
+import imgBiaMockup from '../assets/BIA_marketing_mockup.png';
+import imgSenseLogo from '../assets/company/sense-worldwide.jpg';
+import imgSlidesMockup from '../assets/social-listening-tool-slides-mockup.png';
+import imgSlListeningDiagram from '../assets/social_listening_diagram.png';
+import imgInspirusLogo from '../assets/company/inspirus-education.jpg';
+import imgInspirusMockup from '../assets/inspirus-website-mockup.png';
+import imgLearnsbarMockup from '../assets/learnsbar-mockup.png';
+import imgLearnsbar1 from '../assets/learnsbar-image-1.png';
+import imgLearnsbar2 from '../assets/learnsbar-image-2.png';
+import imgMarketingVenn from '../assets/marketing-analytics-venn.png';
+import imgRStudioMockup from '../assets/r_studio_mockup.png';
 
 const base = import.meta.env.BASE_URL
 
@@ -15,7 +33,7 @@ const ecell = {
     { label: 'Digital Formats Launched', value: '3+', icon: '🎬' },
     { label: 'Digital Presence Established', value: '100%', icon: '✅' },
   ],
-  image: `${base}projects/zaika/zaika_website.jpg`,
+  image: imgZaikaWebsite,
 }
 
 const content_creation = {
@@ -33,49 +51,50 @@ const content_creation = {
 const bia = {
   title: 'Digital Advertising & Marketing Campaign',
   summary:
-    'Boston Institute of Analytics is a training institute specializing in data science. In this role, I managed the digital lead generation strategy for their Mumbai branch, focusing on establishing a market presence and filling enrollment quotas for their technical programs.',
+    'Boston Institute of Analytics is a training institute specializing in data science. In this role, I managed the digital lead generation strategy for their Mumbai branch, focusing on filling enrollment quotas for their first technical program batch.',
   objectives:
-    'Launch & Lead Generation: campaign management, performance tracking, ads strategy and funnel design to generate qualified leads and convert.',
-  impact: [
-    { label: 'Cost Per Lead', value: '$2.01', icon: '👥' },
-    { label: 'Organic Search Ranking', value: 'Page 1', icon: '📈' },
-    { label: 'Cohort Booked', value: '100%', icon: '✅' },
-    { label: 'Digital Presence Established', value: '100%', icon: '✅' },
+    'Developed a targeted ads marketing strategy by levaraging META ads. I optimized audience targeting, ad creatives, and budget allocation to generate qualified leads and maximize conversations.',
+  scope:[
+    'Ads Strategy and Optimization',
+    'Visual Ad Content',
+    'Campaign Execution and Management',
+    'Analytics and Performance Optimziation',
+
   ],
-  image: `${base}BIA_marketing_mockup.png`,
-  logo: `${base}company/boston-institute-of-analytics.jpg`,
+  strategy:[
+'Monitored Ad performance through key metrics (CTR, CPC, Conversion rates)',
+'Optimized ad placements and budget allocation for better ROI.'
+  ],
+    result:  ['✅ Enrollment quota fulfilled - 100% ',
+ '✅ Fully booked cohort '],
+  image: imgBiaMockup,
+  logo: imgBiaLogo,
 }
 
 const senseworldwide = {
-  title: 'Digital Content & Social Media',
+  title: 'Consumer Insights, Market Research & Social Listening',
   summary:
-    "Sense Worldwide is a London-based innovation and brand strategy consultancy. In this role, I developed a data collection pipeline to improve coverage and speed of social media market research",
-  objectives:
-    '',
-  impact: [
-    { label: 'Attendees Gathered', value: '600+', icon: '👥' },
-    { label: 'Organic Search Ranking', value: 'Page 1', icon: '📈' },
-    { label: 'Digital Formats Launched', value: '3+', icon: '🎬' },
-    { label: 'Digital Presence Established', value: '100%', icon: '✅' },
-  ],
-  image: `${base}social-listening-tool-slides-mockup.png`,
-  logo: `${base}company/sense-worldwide.jpg`,
+    "Sense Worldwide is a London-based innovation and brand strategy consultancy. I partnered with them for my UCL MSc Business Analytics dissertation.",
+  objective:"I leveraged latest AI technologies to build data collection pipelines, intelligent analysis tools and dashboards to improve coverage and speed of social media market research.",
+    image: imgSlidesMockup,
+  logo: imgSenseLogo,
 }
 
 const inspirus = {
   title: 'Website Design and SEO',
   summary:
     "Inspirus Education is an overseas higher-education coaching and test-prep institute in Mumbai. I developed the company's website, ensuring it was fast, responsive and optimised for organic growth.",
-  objectives:
-    'Website design, build and ongoing SEO: technical foundation and content structure improve visibility and conversions.',
-  impact: [
-    { label: 'Organic Search', value: 'Page 1', icon: '📈' },
-    { label: 'Lighthouse Score', value: '90+', icon: '⚡' },
-    { label: 'Fully Responsive', value: 'Yes', icon: '📱' },
-    { label: 'SEO Optimised', value: 'Yes', icon: '✅' },
+  objectives:'Developed 9 pages on WordPress with customized themes, blogs and form integrations. I also handled technical SEO and website optimization',
+
+    scope:[
+    'Website Design',
+    'Technical SEO',
+    'Plugins integration',
+    'Website Security',
   ],
-  image: `${base}inspirus-website-mockup.png`,
-  logo: `${base}company/inspirus-education.jpg`,
+
+  image: imgInspirusMockup,
+  logo: imgInspirusLogo,
 }
 
 const learnsbar = {
@@ -84,17 +103,44 @@ const learnsbar = {
     'UI/UX mockups and user flows for an app built as part of an undergrad group project. Focused on clarity and usability.',
   objectives:
     '',
-  image: `${base}learnsbar-mockup.png`,
+  image: imgLearnsbarMockup,
 }
 
 const marketing_analytics = {
   title: 'Marketing Analytics (UCL)',
   summary:
-    'A Term 1 module from my Business Analytics MSc at UCL. Here I learnt how to calculate marketing metrics, design causal experiments, and apply machine learning for customer segmentation and targeting.',
-  objectives:
-    'Apply statistical and econometric methods to marketing data; interpret results and recommend actions.',
-  topics: ['Customer Lifetime Value (CLV)', 'Segmentation', 'Predictive Modelling', 'Causal Inference (RDD, DiD, & IV)'],
-  image: `${base}r_studio_mockup.png`,
+    'This is a module that I studied in my Business Analytics MSc at UCL. Here I learnt how to utilise R programming, machine learning, and causal inference to guide marketing tactics and strategies in a scientific manner.',
+  topics: ['Profitability Analysis',
+  'Data Wrangling in R',
+  'Customer Segmentation', 
+  'Customer Lifetime Value (CLV)', 'Predictive Modelling', 'Causal Inference (RDD, DiD, & IV)'],
+  results: [
+    {
+      assessment: 'Retail Strategy Case Study',
+      focus: 'CAC, CLV',
+      score: '71/100',
+      grade: '✅ Distinction',
+    },
+    {
+      assessment: 'Amazon Prime Case Study',
+      focus: 'Predictive Modelling',
+      score: '74/100',
+      grade: '✅ Distinction',
+    },
+    {
+      assessment: 'Amazon TV Sales Case Study',
+      focus: 'MMM & Brand Equity',
+      score: '75/100',
+      grade: '✅ Distinction',
+    },
+    {
+      assessment: 'Overall module',
+      focus: '',
+      score: '73.33/100',
+      grade: '✅ Distinction',
+    },
+  ],
+  image: imgRStudioMockup,
 }
 ---
 
@@ -112,7 +158,7 @@ const marketing_analytics = {
         <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{ecell.title}</h2>
         <div>
           <div class="float-left mr-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-black bg-black flex items-center justify-center overflow-hidden">
-            <img src={`${base}company/ecell-logo.png`} alt="E-Cell SAKEC logo" class="w-full h-full object-contain" />
+            <Image src={imgEcellLogo} alt="E-Cell SAKEC logo" width={96} height={96} class="w-full h-full object-contain" />
           </div>
           <p class="text-sm sm:text-base leading-relaxed">{ecell.summary}</p>
           <div class="clear-both"></div>
@@ -120,7 +166,7 @@ const marketing_analytics = {
       </div>
       <div class="grid md:grid-cols-[1fr_2fr] gap-6 items-stretch">
         <div class="border-2 border-black bg-white shadow-[6px_6px_0_rgba(0,0,0,0.25)] overflow-hidden min-h-0">
-          <img src={ecell.image} alt="" class="w-full h-full object-cover aspect-square object-center" />
+          <Image src={imgZaikaWebsite} alt="" class="w-full h-full object-cover aspect-square object-center" />
         </div>
         <div class="flex flex-col gap-6">
           <div class="space-y-2">
@@ -163,7 +209,7 @@ const marketing_analytics = {
         </div>
         <div class="space-y-2">
           <div class="border-2 border-black bg-white shadow-[4px_4px_0_rgba(0,0,0,0.25)] overflow-hidden">
-            <img src={`${base}projects/zaika/${content_creation.assets.teaser.file}`} alt={content_creation.assets.teaser.label} class="w-full h-full object-cover" />
+            <Image src={imgZaikaTeaser} alt={content_creation.assets.teaser.label} class="w-full h-full object-cover" />
           </div>
         </div>
         <div class="space-y-2">
@@ -178,7 +224,7 @@ const marketing_analytics = {
         </div>
         <div class="space-y-2">
           <div class="border-2 border-black bg-white shadow-[4px_4px_0_rgba(0,0,0,0.25)] overflow-hidden">
-            <img src={`${base}projects/zaika/${content_creation.assets.usage.file}`} alt={content_creation.assets.usage.label} class="w-full h-full object-cover" />
+            <Image src={imgZaikaUsage} alt={content_creation.assets.usage.label} class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -192,7 +238,7 @@ const marketing_analytics = {
         <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{bia.title}</h2>
         <div>
           <div class="float-left mr-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-black bg-white flex items-center justify-center overflow-hidden">
-            <img src={bia.logo} alt="" class="w-full h-full object-contain" />
+            <Image src={imgBiaLogo} alt="" width={96} height={96} class="w-full h-full object-contain" />
           </div>
           <p class="text-sm sm:text-base leading-relaxed">{bia.summary}</p>
           <div class="clear-both"></div>
@@ -200,25 +246,34 @@ const marketing_analytics = {
       </div>
       <div class="grid md:grid-cols-[2fr_2fr] gap-6 items-stretch">
         <div class="bg-white overflow-hidden min-h-0 flex items-center justify-center">
-          <img src={bia.image} alt="BIA digital marketing mockup: Meta Ads Manager and Instagram ad creatives" class="w-full h-auto object-contain" />
+          <Image src={imgBiaMockup} alt="BIA digital marketing mockup: Meta Ads Manager and Instagram ad creatives" class="w-full h-auto object-contain" />
         </div>
         <div class="flex flex-col gap-6">
           <div class="space-y-2">
-            <h3 class="text-lg font-semibold">Objectives & role</h3>
+            <h3 class="text-lg font-semibold">Objectives</h3>
             <p class="space-y-1 text-sm">{bia.objectives}</p>
           </div>
           <div class="space-y-3">
-            <h3 class="text-xl font-semibold">The impact.</h3>
-            <div class="grid grid-cols-2 gap-3">
-              {bia.impact.map((item) => (
-                <div class="relative border-2 border-black bg-white p-3 flex flex-col shadow-[4px_4px_0_rgba(0,0,0,0.25)]">
-                  <span class="absolute top-3 right-4 text-3xl text-emerald-500 leading-none">↑</span>
-                  <div class="text-xl mb-1">{item.icon}</div>
-                  <p class="text-lg font-semibold leading-none">{item.value}</p>
-                  <p class="text-xs mt-1 text-black/80">{item.label}</p>
-                </div>
+            <h3 class="text-lg font-semibold">Scope</h3>
+            <ul class="flex flex-wrap gap-2">
+              {bia.scope.map((item) => (
+                <li class="border-2 border-black bg-white px-3 py-1.5 text-sm shadow-[3px_3px_0_rgba(0,0,0,0.2)]">{item}</li>
               ))}
-            </div>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold">Strategy</h3>
+            <ul class="space-y-1 text-sm list-disc list-inside">
+              {bia.strategy.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold">Result</h3>
+            {bia.result.map((item) => (
+            <p class="text-sm border-2 border-black bg-white px-3 py-2 shadow-[3px_3px_0_rgba(0,0,0,0.2)]">{item}</p>
+            ))}
           </div>
         </div>
       </div>
@@ -232,7 +287,7 @@ const marketing_analytics = {
         <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{senseworldwide.title}</h2>
         <div>
           <div class="float-left mr-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-black bg-white flex items-center justify-center overflow-hidden">
-            <img src={senseworldwide.logo} alt="" class="w-full h-full object-contain" />
+            <Image src={imgSenseLogo} alt="" width={96} height={96} class="w-full h-full object-contain" />
           </div>
           <p class="text-sm sm:text-base leading-relaxed">{senseworldwide.summary}</p>
           <div class="clear-both"></div>
@@ -240,16 +295,21 @@ const marketing_analytics = {
       </div>
 
       <div class="w-full flex items-center justify-center overflow-hidden">
-        <img
-          src={senseworldwide.image}
+        <Image
+          src={imgSlidesMockup}
           alt="Social listening tool mockup and slide overview"
           class="w-full h-auto object-contain"
         />
       </div>
 
+      <div class="space-y-2">
+        <h3 class="text-lg font-semibold">Objectives</h3>
+        <p class="space-y-1 text-sm">{senseworldwide.objective}</p>
+      </div>
+
       <div class="w-full flex items-center justify-center overflow-hidden mt-4">
-        <img
-          src={`${base}social_listening_diagram.png`}
+        <Image
+          src={imgSlListeningDiagram}
           alt="Social listening diagram combining phones, data table, and charts"
           class="w-full h-auto object-contain"
         />
@@ -264,7 +324,7 @@ const marketing_analytics = {
         <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{inspirus.title}</h2>
         <div>
           <div class="float-left mr-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-black bg-white flex items-center justify-center overflow-hidden">
-            <img src={inspirus.logo} alt="" class="w-full h-full object-contain" />
+            <Image src={imgInspirusLogo} alt="" width={96} height={96} class="w-full h-full object-contain" />
           </div>
           <p class="text-sm sm:text-base leading-relaxed">{inspirus.summary}</p>
           <div class="clear-both"></div>
@@ -272,24 +332,19 @@ const marketing_analytics = {
       </div>
       <div class="grid gap-6 items-stretch">
         <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
-          <img src={inspirus.image} alt="Inspirus website mockup" class="w-full h-auto object-contain" />
+          <Image src={imgInspirusMockup} alt="Inspirus website mockup" class="w-full h-auto object-contain" />
         </div>
         <div class="grid md:grid-cols-2 gap-6">
           <div class="space-y-2">
-            <h3 class="text-lg font-semibold">Objectives & role</h3>
+            <h3 class="text-lg font-semibold">Objectives</h3>
             <p class="space-y-1 text-sm">{inspirus.objectives}</p>
           </div>
           <div class="space-y-3">
-            <h3 class="text-xl font-semibold">The impact.</h3>
+            <h3 class="text-xl font-semibold">My Scope</h3>
             <div class="grid grid-cols-2 gap-3">
-              {inspirus.impact.map((item) => (
-                <div class="relative border-2 border-black bg-white p-3 flex flex-col shadow-[4px_4px_0_rgba(0,0,0,0.25)]">
-                  <span class="absolute top-3 right-4 text-3xl text-emerald-500 leading-none">↑</span>
-                  <div class="text-xl mb-1">{item.icon}</div>
-                  <p class="text-lg font-semibold leading-none">{item.value}</p>
-                  <p class="text-xs mt-1 text-black/80">{item.label}</p>
-                </div>
-              ))}
+                {inspirus.scope.map((item) => (
+                <p class="text-sm border-2 border-black bg-white px-3 py-2 shadow-[3px_3px_0_rgba(0,0,0,0.2)]">{item}</p>
+                ))}
             </div>
           </div>
         </div>
@@ -306,21 +361,21 @@ const marketing_analytics = {
       </div>
       <div class="grid grid-cols-[1fr_2fr] md:grid-cols-2 gap-6 items-stretch">
         <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
-          <img src={learnsbar.image} alt="LearnSbar app mockup" class="w-full md:w-1/2 h-auto object-contain" />
+          <Image src={imgLearnsbarMockup} alt="LearnSbar app mockup" class="w-full md:w-1/2 h-auto object-contain" />
         </div>
         <div class="flex flex-col gap-6">
 
           <div class="grid  gap-4">
             <div class="border-2 border-black bg-white shadow-[6px_6px_0_rgba(0,0,0,0.25)] overflow-hidden">
-              <img
-                src={`${base}learnsbar-image-1.png`}
+              <Image
+                src={imgLearnsbar1}
                 alt="LearnSbar screen 1"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="border-2 border-black bg-white shadow-[6px_6px_0_rgba(0,0,0,0.25)] overflow-hidden">
-              <img
-                src={`${base}learnsbar-image-2.png`}
+              <Image
+                src={imgLearnsbar2}
                 alt="LearnSbar screen 2"
                 class="w-full h-full object-cover"
               />
@@ -339,32 +394,83 @@ const marketing_analytics = {
         <p class="text-sm sm:text-base leading-relaxed">{marketing_analytics.summary}</p>
       </div>
       <div class="grid gap-6 items-stretch">
-        <div class="space-y-4">
-          <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
-            <img src={`${base}marketing-analytics-syllabus.svg`} alt="Marketing analytics module syllabus" class="w-full h-auto object-contain" />
+        <div class="space-y-0">
+          <!-- Marketing analytics syllabus flowchart (HTML/Tailwind) -->
+          <div class="flex flex-col items-center p-6">
+            <p class="text-base font-normal text-black/80 mb-1">Marketing Analytics Syllabus.</p>
+            <div class="border-2 border-black px-6 py-3 font-bold text-base" style="background-color:#F3D053">Phase 1: Foundation</div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black bg-white px-6 py-4 text-left text-sm w-full max-w-xl">
+              <p><strong>Week 1:</strong> Product-centric NPV</p>
+              <p><strong>Week 2:</strong> Customer-centric CLV</p>
+              <p><strong>Week 3:</strong> Data Wrangling</p>
+            </div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black px-6 py-3 font-bold text-base" style="background-color:#F3D053">Phase 2: Predictive Analytics</div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black bg-white px-6 py-4 text-left text-sm w-full max-w-xl">
+              <p><strong>Week 4:</strong> Segmentation (Unsupervised Learning)</p>
+              <p><strong>Week 5:</strong> Targeting (Supervised Learning)</p>
+            </div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black px-6 py-3 font-bold text-base" style="background-color:#F3D053">Phase 3: Causal Inference</div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black bg-white px-6 py-4 text-left text-sm w-full max-w-xl">
+              <p><strong>Week 6 &amp; 7:</strong> Primary Data &amp; A/B Testing</p>
+              <p><strong>Week 8:</strong> Endogeneity &amp; Instrumental Variable</p>
+              <p><strong>Week 9:</strong> Natural Experiment</p>
+              <p><strong>Week 10:</strong> Causal Machine Learning</p>
+            </div>
           </div>
 
         </div>
         <div class="grid md:grid-cols-2 gap-6">
           <div class="flex flex-col gap-6"> 
-            
-          <div class="space-y-2">
-            <h3 class="text-lg font-semibold">Objectives</h3>
-            <p class="space-y-1 text-sm">{marketing_analytics.objectives}</p>
-          </div>
-          
-          <div class="space-y-3">
-            <h3 class="text-xl font-semibold">Topics covered</h3>
-            <ul class="flex flex-wrap gap-2">
-              {marketing_analytics.topics.map((topic) => (
-                <li class="border-2 border-black bg-white px-3 py-1.5 text-sm shadow-[3px_3px_0_rgba(0,0,0,0.2)]">{topic}</li>
-              ))}
-            </ul>
-          </div>
+            <div class="space-y-3">
+              <h3 class="text-xl font-semibold">Results &amp; grades</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm border-2 border-black bg-white shadow-[3px_3px_0_rgba(0,0,0,0.2)]">
+                  <thead class="bg-black text-white">
+                    <tr>
+                      <th class="px-3 py-2 text-left font-semibold border-r border-white whitespace-normal break-words">
+                        Assessment
+                      </th>
+                      <th class="px-3 py-2 text-left font-semibold whitespace-normal break-words">
+                        Grade
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {marketing_analytics.results.map((item, index) => (
+                      <tr class={index === marketing_analytics.results.length - 1 ? 'bg-yellow-100/80 font-semibold' : 'bg-white'}>
+                        <td class="px-3 py-2 border-t border-black/20 align-top whitespace-normal break-words">
+                          <p>{item.assessment}</p>
+                          {item.focus && item.focus !== '-' && (
+                            <p class="text-xs text-black/70 mt-0.5">{item.focus}</p>
+                          )}
+                        </td>
+                        <td class="px-3 py-2 border-t border-black/20 align-top whitespace-normal break-words">
+                          {item.grade}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="text-xl font-semibold">Topics covered</h3>
+              <ul class="flex flex-wrap gap-2">
+                {marketing_analytics.topics.map((topic) => (
+                  <li class="border-2 border-black bg-white px-3 py-1.5 text-sm shadow-[3px_3px_0_rgba(0,0,0,0.2)]">{topic}</li>
+                ))}
+              </ul>
+            </div>
           
         </div>
           <div class="overflow-hidden min-h-0 flex items-center justify-center bg-transparent">
-            <img src={`${base}marketing-analytics-venn.png`} alt="Marketing analytics venn diagram" class="w-full h-auto object-contain" />
+            <Image src={imgMarketingVenn} alt="Marketing analytics venn diagram" class="w-full h-auto object-contain" />
           </div>
 
 

@@ -1,7 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import Bars from "./Bars.astro"
 import svgUnderline from '../assets/underline.svg'
 import arrowCard from '../assets/arrow-card.svg'
+
+import imgInstacartShap from '../assets/projects/instacart/instacart_shap.png';
+import imgSltArch from '../assets/projects/slt/slt_system_architecture.png';
+import imgZaikaUsage from '../assets/projects/zaika/zaika_usage_thumbnail.jpg';
 
 const base = import.meta.env.BASE_URL
 
@@ -13,17 +18,17 @@ const { currentCorner } = Astro.props;
 const allCorners = [
   { 
     name: 'Analytics Corner', desc: `Explore projects in predictive modeling, marketing science, and business insights.`,
-    cover: `${base}projects/instacart/instacart_shap.png`,
+    cover: imgInstacartShap,
     href: `${base}analytics-corner`
   },
   { 
     name: 'Tech Corner', desc: `Explore projects in big data pipelines, system architecture, and full-stack builds.`,
-    cover: `${base}projects/slt/slt_system_architecture.png`,
+    cover: imgSltArch,
     href: `${base}tech-corner`
   },
   { 
     name: 'Creative Corner', desc: `Explore projects in visual storytelling, video production, and high-impact design.`,
-    cover: `${base}projects/zaika/zaika_usage_thumbnail.jpg`,
+    cover: imgZaikaUsage,
     href: `${base}creative-corner`
   }
 ];
@@ -44,7 +49,7 @@ const corners = currentCorner
       {corners.length > 0 && corners.map(item => ( 
         <a href={item.href} class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)]">
           <div class="w-full h-[200px] overflow-hidden border-2">
-           <img src={item.cover} alt="" class="w-full h-full object-cover object-[center_55%]" />
+           <Image src={item.cover} alt="" class="w-full h-full object-cover object-[center_55%]" />
           </div>
           <div class="space-y-1 pt-4">
             <div class="flex pr-2">

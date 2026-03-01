@@ -70,7 +70,7 @@ summary: "Built a predictive model analyzing 9,000+ Udemy courses to forecast en
 
 **2. Most courses are in Programming, IT & Software, and Analytics/AI/ML** 
  
-![Course Category Distribution](/projects/udemy/udemy_distribution_courses.png)
+![Course Category Distribution](../../assets/projects/udemy/udemy_distribution_courses.png)
 
 ---
 
@@ -120,20 +120,20 @@ Models performance
 
 **6. Random Forest outperformed Decision Tree (R² = 0.51 vs 0.36 on original scale)** 
 
-![Random Forest Prediction vs Actual](/projects/udemy/udemy_randomforest_prediction_vs_actual.png)
-![Decision Tree Prediction vs Actual](/projects/udemy/udemy_decision_actual_predicted.png)
+![Random Forest Prediction vs Actual](../../assets/projects/udemy/udemy_randomforest_prediction_vs_actual.png)
+![Decision Tree Prediction vs Actual](../../assets/projects/udemy/udemy_decision_actual_predicted.png)
 
 ---
 
 **7. Learning Curves**  
 
-![Learning Curves](/projects/udemy/udemy_learning_curves.png)
+![Learning Curves](../../assets/projects/udemy/udemy_learning_curves.png)
 
 ---
 
 **8. Validation curves for hyperparameter tuning** 
 
-![Validation Curves](/projects/udemy/udemy_validation_Curves.png)
+![Validation Curves](../../assets/projects/udemy/udemy_validation_Curves.png)
 
 ---
 

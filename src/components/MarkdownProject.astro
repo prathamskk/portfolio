@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import { getImage } from '../lib/images';
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 
@@ -36,17 +38,18 @@ const relatedProjects = allProjects.filter((p: any) => {
         <!-- Main content -->
         <div class="max-w-3xl p-3 bg-white flex flex-col gap-7 border-3">
 
-                {frontmatter.image?.url && (
+                {frontmatter.image?.url && (() => {
+                    const img = getImage(frontmatter.image.url.replace(/^\//, ''));
+                    return img ? (
                     <div class="w-full aspect-video border-2 overflow-hidden bg-gray-100">
-                        <img
-                            src={`${base}${frontmatter.image.url.replace(/^\//, '')}`}
+                        <Image
+                            src={img}
                             alt={frontmatter.image.alt ?? frontmatter.title}
-                            width={1260}
-                            height={708}
                             class="w-full h-full object-cover object-center"
                         />
                     </div>
-                )}
+                    ) : null;
+                })()}
                 <h1 class="title text-4xl font-black">{frontmatter.title}</h1>
 
                 <div class="flex flex-col">

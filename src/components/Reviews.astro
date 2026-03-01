@@ -1,7 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import svgNew from '../assets/new.svg'
 
-const base = import.meta.env.BASE_URL
+import imgGopal from '../assets/review/profile_photo_gopal.jpg';
+import imgMilind from '../assets/review/profile_photo_milind.webp';
+import imgLeila from '../assets/review/profile_photo_leila.jpg';
 
 const testimonials = [
   {
@@ -9,7 +12,7 @@ const testimonials = [
     author: {
       name: `Dr. Gopal Nanda`,
       pos: `Professor of Engineering Mathematics, SAKEC`,
-      pic: `${base}review/profile_photo_gopal.jpg`
+      pic: imgGopal
     },
     cls: `rotate-2 -translate-y-10`
   },
@@ -18,7 +21,7 @@ const testimonials = [
     author: {
       name: `Milind Khairnar`,
       pos: `Professor of AI & Data Science, SAKEC`,
-      pic: `${base}review/profile_photo_milind.webp`
+      pic: imgMilind
     },
     cls: `-rotate-2 -translate-x-10  z-5`
   },
@@ -27,7 +30,7 @@ const testimonials = [
     author: {
       name: `Leila Boushehri`,
       pos: `Data Scientist, Sense Worldwide`,
-      pic: `${base}review/profile_photo_leila.jpg`
+      pic: imgLeila
     },
     cls: `rotate-2 translate-x-5 z-5`
   },
@@ -51,7 +54,7 @@ const testimonials = [
             <p>{item.comment}</p>
             <div class="flex items-center gap-2">
               <div><div class="size-11 rounded-full border overflow-hidden">
-                  <img src={item.author.pic} alt="" class="w-full h-full object-cover filter grayscale" style="-webkit-filter: grayscale(100%);" />
+                  <Image src={item.author.pic} alt="" class="w-full h-full object-cover filter grayscale" style="-webkit-filter: grayscale(100%);" />
               </div></div>
               <div>
                 <h3 class="font-medium">{item.author.name}</h3>

@@ -2,36 +2,30 @@
 const mytools = [
   'SEO', 'MMM', 'R Studio', 'Python', 'Data Engineering', 'Excel', 'PowerPoint', 'Shopify', 'Photoshop', 'Adobe XD', 'Miro'
 ]
---- 
-<script>
-import { gsap } from 'gsap';
-
-document.addEventListener('DOMContentLoaded', function () {
-    const clonedContainer = document.querySelector('#cloned') as any
-
-    Array.from(clonedContainer.children).forEach((img: any) => {
-        const clone = img.cloneNode(true); 
-        clonedContainer.appendChild(clone); 
-    })
-
-    const tl = gsap.timeline({ repeat: -1 });
-    tl.to(clonedContainer, {
-        x: -(clonedContainer.scrollWidth / 2),  duration: 30, ease: 'none'
-    })
-});
-</script>
-  
-
+---
 
 <section class="bg-black py-6 relative z-5">
-    <div class="overflow-hidden">
-        <div class="flex items-center gap-10 md:gap-30" id="cloned">
-            {mytools.map(item => (
-              <div class="text-white flex-1 text-2xl whitespace-nowrap"> {item} </div>
-            ))}
-        </div>
+  <div class="overflow-hidden">
+    <div class="tools-marquee flex items-center gap-10 md:gap-30 w-max">
+      {mytools.map((item) => (
+        <span class="text-white text-2xl whitespace-nowrap">{item}</span>
+      ))}
+      {mytools.map((item) => (
+        <span class="text-white text-2xl whitespace-nowrap">{item}</span>
+      ))}
     </div>
+  </div>
 </section>
+
+<style>
+  .tools-marquee {
+    animation: tools-marquee 30s linear infinite;
+  }
+  @keyframes tools-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
 
 
 
