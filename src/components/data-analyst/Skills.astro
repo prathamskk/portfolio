@@ -1,0 +1,133 @@
+---
+import { Image } from 'astro:assets';
+
+import imgMetaLogo from '../../assets/logos/meta-logo.jpg';
+import imgHubspot from '../../assets/logos/hubspot-logo.png';
+import imgCapcut from '../../assets/logos/capcut-logo.jpg';
+import imgMicrosoft365 from '../../assets/logos/microsoft-365-logo.jpg';
+import imgUdemy from '../../assets/logos/udemy-logo.png';
+
+import svgGoogleAds from '../../assets/logos/google_ads-icon.svg';
+import svgGoogleAnalytics from '../../assets/logos/google_analytics-icon.svg';
+import svgGoogleSearchConsole from '../../assets/logos/google-search-console.svg';
+import svgGoogleTrends from '../../assets/logos/google-trends.svg';
+import svgAdobe from '../../assets/logos/adobe-creative-cloud.svg';
+import svgFigma from '../../assets/logos/figma-icon.svg';
+import svgPowerBI from '../../assets/logos/powerbi-logo.svg';
+
+const skills = [
+  'Digital Marketing',
+  'UI/UX',
+  'Digital Advertising',
+  'Search Engine Optimization (SEO)',
+  'Content Creation',
+  'Web Development',
+  'Data Analytics',
+]
+
+const toolGroups = [
+  {
+    name: 'Ads & Growth',
+    tools: [
+      { name: 'Meta Ads', logo: { img: imgMetaLogo, alt: 'Meta' } },
+      { name: 'Google Ads', logo: { svg: svgGoogleAds, alt: 'Google Ads' } },
+      { name: 'HubSpot', logo: { img: imgHubspot, alt: 'HubSpot' } },
+    ],
+  },
+  {
+    name: 'Marketing Strategy',
+    tools: [
+      { name: 'Google Analytics', logo: { svg: svgGoogleAnalytics, alt: 'Google Analytics' } },
+      { name: 'Google Search Console', logo: { svg: svgGoogleSearchConsole, alt: 'Google Search Console' } },
+      { name: 'Google Trends', logo: { svg: svgGoogleTrends, alt: 'Google Trends' } },
+    ],
+  },
+  {
+    name: 'Branding & Social Media Marketing',
+    tools: [
+      { name: 'Adobe Creative Suite', logo: { svg: svgAdobe, alt: 'Adobe Creative Cloud' } },
+      { name: 'CapCut', logo: { img: imgCapcut, alt: 'CapCut' } },
+      { name: 'Figma', logo: { svg: svgFigma, alt: 'Figma' } },
+    ],
+  },
+  {
+    name: 'Analytics & Insight',
+    tools: [
+      { name: 'PowerBI', logo: { svg: svgPowerBI, alt: 'Power BI' } },
+      { name: 'Google Analytics', logo: { svg: svgGoogleAnalytics, alt: 'Google Analytics' } },
+      { name: 'Microsoft 365', logo: { img: imgMicrosoft365, alt: 'Microsoft 365' } },
+    ],
+  },
+]
+
+const certifications = [
+  {
+    name: 'Udemy - Facebook Ads & Facebook Marketing MASTERY',
+    provider: 'COURSENVY',
+    period: 'Sep 2022 – Oct 2022',
+    logo: imgUdemy,
+  },
+]
+---
+
+<section class="py-20 px-5 bg-[var(--bg-color, #fdfaf4)]" id="skills">
+  <div class="max-w-5xl mx-auto space-y-10">
+    <div class="text-center space-y-4">
+      <p class="uppercase text-xs tracking-[0.25em]">what I work with</p>
+      <h2 class="text-4xl md:text-5xl font-medium">skills.</h2>
+    </div>
+
+    <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+      {skills.map((item) => (
+        <span class="inline-flex items-center rounded-full border-2 border-black/60 bg-white px-4 py-1 text-sm md:text-base shadow-[3px_3px_0_rgba(0,0,0,0.3)]">
+          {item}
+        </span>
+      ))}
+    </div>
+
+    <div class="space-y-6 pt-6">
+      <h3 class="text-3xl font-medium">tools.</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {toolGroups.map((group) => (
+          <div class="border-2 bg-white p-4 md:p-5 shadow-[4px_4px_0_rgba(0,0,0,0.25)] space-y-4">
+            <h4 class="text-lg font-medium">{group.name}</h4>
+            <div class="flex flex-wrap content-center">
+              {group.tools.map((tool) => (
+                <div class="flex flex-col items-center gap-2 w-24 text-center">
+                  <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-xl border-2 border-black/20 bg-white flex items-center justify-center overflow-hidden shadow-[3px_3px_0_rgba(0,0,0,0.2)]">
+                    {tool.logo.img ? (
+                      <Image src={tool.logo.img} alt={tool.logo.alt} width={56} height={56} class="w-full h-full object-contain p-1" />
+                    ) : (
+                      <img src={tool.logo.svg.src} alt={tool.logo.alt} class="w-full h-full object-contain p-1" />
+                    )}
+                  </div>
+                  <span class="text-sm font-medium leading-tight">{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="border-t-2 border-black/10 pt-8 mt-4 space-y-4">
+      <h3 class="text-3xl font-medium">certification.</h3>
+      <ul class="space-y-3">
+        {certifications.map((cert) => (
+          <li class="flex items-center gap-4 border-2 bg-white px-4 py-3 shadow-[3px_3px_0_rgba(0,0,0,0.25)]">
+            <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl border bg-white flex items-center justify-center overflow-hidden shrink-0 shadow-[3px_3px_0_rgba(0,0,0,0.3)]">
+              <Image src={cert.logo} alt={`${cert.provider} logo`} width={56} height={56} class="w-full h-full object-contain" />
+            </div>
+            <div class="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-3">
+              <div>
+                <p class="font-medium">{cert.name}</p>
+                <p class="text-sm text-gray-600">{cert.provider}</p>
+              </div>
+              <p class="text-sm md:text-right text-gray-700">{cert.period}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
