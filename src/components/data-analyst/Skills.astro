@@ -2,70 +2,75 @@
 import { Image } from 'astro:assets';
 
 import imgMetaLogo from '../../assets/logos/meta-logo.jpg';
-import imgHubspot from '../../assets/logos/hubspot-logo.png';
-import imgCapcut from '../../assets/logos/capcut-logo.jpg';
 import imgMicrosoft365 from '../../assets/logos/microsoft-365-logo.jpg';
 import imgUdemy from '../../assets/logos/udemy-logo.png';
+import imgTopSql from '../../assets/Top_SQL_50.gif';
 
-import svgGoogleAds from '../../assets/logos/google_ads-icon.svg';
 import svgGoogleAnalytics from '../../assets/logos/google_analytics-icon.svg';
-import svgGoogleSearchConsole from '../../assets/logos/google-search-console.svg';
 import svgGoogleTrends from '../../assets/logos/google-trends.svg';
-import svgAdobe from '../../assets/logos/adobe-creative-cloud.svg';
-import svgFigma from '../../assets/logos/figma-icon.svg';
 import svgPowerBI from '../../assets/logos/powerbi-logo.svg';
 
+import imgLookerStudio from '../../assets/logos/looker_studio_logo.jpg';
+import imgTableau from '../../assets/logos/tableau_logo.png';
+import svgBigQuery from '../../assets/logos/google-bigquery-logo.svg';
+import svgDatabricks from '../../assets/logos/databricks-logo.svg';
+import imgChatGPT from '../../assets/logos/ChatGPT_logo.svg.png';
+import svgCopilot from '../../assets/logos/github_copilot-icon.svg';
+import svgPython from '../../assets/logos/Python-logo.svg';
+
 const skills = [
-  'Digital Marketing',
-  'UI/UX',
-  'Digital Advertising',
-  'Search Engine Optimization (SEO)',
-  'Content Creation',
-  'Web Development',
-  'Data Analytics',
+'SQL',
+'Marketing Analytics',
+'Data Analytics',
+'Statistical Analysis',
+'Looker Studio',
+'Stakeholder Management',
+'Tableau',
+'Business Intelligence',
 ]
 
 const toolGroups = [
   {
-    name: 'Ads & Growth',
+    name: 'Business Intelligence',
     tools: [
-      { name: 'Meta Ads', logo: { img: imgMetaLogo, alt: 'Meta' } },
-      { name: 'Google Ads', logo: { svg: svgGoogleAds, alt: 'Google Ads' } },
-      { name: 'HubSpot', logo: { img: imgHubspot, alt: 'HubSpot' } },
+      { name: 'Looker Studio', logo: { img: imgLookerStudio, alt: 'Looker Studio logo' } },
+      { name: 'Tableau',       logo: { img: imgTableau,      alt: 'Tableau logo' } },
+      { name: 'Power BI', logo: { svg: svgPowerBI, alt: 'Microsoft Power BI logo' } },
     ],
   },
   {
-    name: 'Marketing Strategy',
+    name: 'Data Analytics',
     tools: [
-      { name: 'Google Analytics', logo: { svg: svgGoogleAnalytics, alt: 'Google Analytics' } },
-      { name: 'Google Search Console', logo: { svg: svgGoogleSearchConsole, alt: 'Google Search Console' } },
-      { name: 'Google Trends', logo: { svg: svgGoogleTrends, alt: 'Google Trends' } },
+      { name: 'BigQuery', logo: { svg: svgBigQuery, alt: 'Google BigQuery logo' } },
+      { name: 'Excel', logo: { img: imgMicrosoft365, alt: 'Microsoft Excel / Microsoft 365 logo' } },
+      { name: 'Databricks', logo: { svg: svgDatabricks, alt: 'Databricks logo' } },
     ],
   },
   {
-    name: 'Branding & Social Media Marketing',
+    name: 'Marketing Analytics',
     tools: [
-      { name: 'Adobe Creative Suite', logo: { svg: svgAdobe, alt: 'Adobe Creative Cloud' } },
-      { name: 'CapCut', logo: { img: imgCapcut, alt: 'CapCut' } },
-      { name: 'Figma', logo: { svg: svgFigma, alt: 'Figma' } },
+      { name: 'Google Analytics', logo: { svg: svgGoogleAnalytics, alt: 'Google Analytics 4 logo' } },
+      { name: 'Meta Ads Manager', logo: { img: imgMetaLogo, alt: 'Meta logo' } },
+      { name: 'Google Trends', logo: { svg: svgGoogleTrends, alt: 'Google Trends logo' } },
     ],
   },
   {
-    name: 'Analytics & Insight',
+    name: 'AI & Automation',
     tools: [
-      { name: 'PowerBI', logo: { svg: svgPowerBI, alt: 'Power BI' } },
-      { name: 'Google Analytics', logo: { svg: svgGoogleAnalytics, alt: 'Google Analytics' } },
-      { name: 'Microsoft 365', logo: { img: imgMicrosoft365, alt: 'Microsoft 365' } },
+      { name: 'ChatGPT & LLMs', logo: { img: imgChatGPT, alt: 'OpenAI ChatGPT logo' } },
+      { name: 'GitHub Copilot', logo: { svg: svgCopilot, alt: 'GitHub Copilot logo' } },
+      { name: 'Python', logo: { svg: svgPython, alt: 'Python logo' } },
     ],
   },
 ]
 
-const certifications = [
+const achievements = [
   {
-    name: 'Udemy - Facebook Ads & Facebook Marketing MASTERY',
-    provider: 'COURSENVY',
-    period: 'Sep 2022 – Oct 2022',
-    logo: imgUdemy,
+    name: 'Top SQL 50',
+    provider: 'LeetCode',
+    desc: 'Awarded for completing a curated selection of 50 problems covering fundamental to advanced SQL techniques',
+    period: '',
+    logo: imgTopSql,
   },
 ]
 ---
@@ -111,19 +116,19 @@ const certifications = [
     </div>
 
     <div class="border-t-2 border-black/10 pt-8 mt-4 space-y-4">
-      <h3 class="text-3xl font-medium">certification.</h3>
+      <h3 class="text-3xl font-medium">achievement.</h3>
       <ul class="space-y-3">
-        {certifications.map((cert) => (
+        {achievements.map((achieve) => (
           <li class="flex items-center gap-4 border-2 bg-white px-4 py-3 shadow-[3px_3px_0_rgba(0,0,0,0.25)]">
-            <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl border bg-white flex items-center justify-center overflow-hidden shrink-0 shadow-[3px_3px_0_rgba(0,0,0,0.3)]">
-              <Image src={cert.logo} alt={`${cert.provider} logo`} width={56} height={56} class="w-full h-full object-contain" />
+            <div class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center overflow-hidden shrink-0">
+              <Image src={achieve.logo} alt="Top SQL 50 achievement badge" width={56} height={56} class="w-full h-full object-contain" />
             </div>
             <div class="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-3">
               <div>
-                <p class="font-medium">{cert.name}</p>
-                <p class="text-sm text-gray-600">{cert.provider}</p>
+                <p class="font-medium">{achieve.name} - {achieve.provider}</p>
+                <p class="text-sm text-gray-600">{achieve.  desc} </p>
               </div>
-              <p class="text-sm md:text-right text-gray-700">{cert.period}</p>
+              {achieve.period && <p class="text-sm md:text-right text-gray-700">{achieve.period}</p>}
             </div>
           </li>
         ))}
