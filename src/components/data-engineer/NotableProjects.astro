@@ -5,8 +5,57 @@ import Button from './Button.astro'
 
 import imgSenseLogo from '../../assets/company/sense-worldwide.jpg'
 import imgUCLLogo from '../../assets/company/ucl_school_of_management_logo.jpg'
+import imgSlidesMockup from '../../assets/social-listening-tool-slides-mockup.png'
+import imgSlListeningDiagram from '../../assets/social_listening_diagram.png'
+import imgDataIntegrationSocial from '../../assets/data_integration_social.png'
+import imgDashboardSocialListening from '../../assets/dashboard_development_social_listening.png'
+import imgUclDataEngineeringCourseStructure from '../../assets/ucl_data_engineering_course_structure.png'
 
 const base = import.meta.env.BASE_URL
+
+const data_engineering_ucl = {
+  title: 'Data Engineering (UCL)',
+  summary:
+    'A core MSc Business Analytics module at UCL on applying software engineering to manage large datasets, moving beyond single-node limits, and building data-intensive applications. I learned to design scalable pipelines, use distributed compute, and deploy MLOps and LLMOps workflows.',
+  results: [
+    {
+      assessment: 'Individual Programming Assignment',
+      focus: 'AI Competitor Intelligence Tool',
+      grade: '70.00% — Distinction',
+    },
+    {
+      assessment: 'Group Programming Assignment',
+      focus: 'Hotel Data Engineering Pipeline',
+      grade: '66.00% — Merit',
+    },
+    {
+      assessment: 'In-Class Practical Assessment',
+      focus: 'Database Integration & Spark',
+      grade: '65.00% — Merit',
+    },
+  ],
+  topics: [
+    'Python',
+    'Linux / UNIX shell',
+    'Git & CI/CD',
+    'Apache Spark',
+    'Hadoop',
+    'MapReduce',
+    'PostgreSQL',
+    'MongoDB',
+    'DuckDB',
+    'Raphtory',
+    'PgVector',
+    'Google Cloud Storage',
+    'BigQuery',
+    'Docker',
+    'MLOps',
+    'LLMOps',
+    'Microservices',
+    'APIs',
+    'Selenium',
+  ],
+}
 ---
 
 <section class="py-20 px-5" id="notable-projects">
@@ -70,12 +119,40 @@ const base = import.meta.env.BASE_URL
         </p>
       </div>
       <div class="clear-both"></div>
-      <div class="overflow-hidden border-2 border-black">
+      <div class="">
+        <Image
+          src={imgSlListeningDiagram}
+          alt="Social listening diagram combining phones, data table, and charts"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+      <div class="overflow-hidden border-2 border-black bg-white">
         <img
           src={`${base}projects/slt/slt_system_architecture.png`}
           alt="SLT system architecture diagram"
           class="w-full h-auto object-contain bg-white"
           loading="lazy"
+        />
+      </div>
+      <p class="text-sm sm:text-base leading-relaxed text-black/90">
+        Ingestion lands Reddit and Quora threads into BigQuery; SQL transforms align schemas and dedupe so embeddings, clustering, and reporting
+        always read one analysis-ready dataset.
+      </p>
+      <div class="">
+        <Image
+          src={imgDataIntegrationSocial}
+          alt="Data integration workflow: Reddit and Quora data unified via SQL into a single analysis-ready view"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+      <p class="text-sm sm:text-base leading-relaxed text-black/90">
+        Looker Studio connects to curated tables so each run exposes topic maps, sentiment, run metadata, and LLM topic copy in one place.
+      </p>
+      <div class="">
+        <Image
+          src={imgDashboardSocialListening}
+          alt="Social listening dashboard: database schema, topic map, sentiment distribution and run summary"
+          class="w-full h-auto object-contain"
         />
       </div>
       <div class="overflow-hidden border-2 border-black bg-black">
@@ -87,6 +164,18 @@ const base = import.meta.env.BASE_URL
           preload="metadata"
           aria-label="SLT demo walkthrough"></video>
       </div>
+      <p class="text-sm sm:text-base leading-relaxed text-black/90">
+        Alongside live dashboards, slide-style summaries and a single narrative diagram help translate pipeline output for stakeholders who do not
+        live in the warehouse.
+      </p>
+      <div class="">
+        <Image
+          src={imgSlidesMockup}
+          alt="Social listening tool mockup and slide overview"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+
       <div class="grid grid-cols-2 gap-3">
         {['slt_1.png', 'slt_2.png', 'slt_3.png', 'slt_4.png'].map((name) => (
           <div class="border-2 border-black overflow-hidden bg-white">
@@ -130,6 +219,108 @@ const base = import.meta.env.BASE_URL
             class="w-full h-auto object-contain"
             loading="lazy"
           />
+        </div>
+      </div>
+    </div>
+
+    <div class="my-4 h-px bg-black/15"></div>
+
+    <!-- Data Engineering (UCL) — layout mirrors data-analyst Marketing Analytics -->
+    <div class="space-y-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-medium leading-tight">{data_engineering_ucl.title}</h2>
+        <p class="text-sm sm:text-base leading-relaxed">{data_engineering_ucl.summary}</p>
+      </div>
+      <div class="grid gap-6 items-stretch">
+        <div class="space-y-0">
+          <div class="flex flex-col items-center p-6">
+            <p class="text-base font-normal text-black/80 mb-1">Data Engineering Syllabus.</p>
+            <div class="border-2 border-black px-6 py-3 font-bold text-base" style="background-color:#F3D053">
+              Phase 1: Foundation &amp; Architecture
+            </div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black bg-white px-6 py-4 text-left text-sm w-full max-w-xl">
+              <p><strong>Week 1–2:</strong> Data encodings, storage options, relational &amp; NoSQL databases</p>
+              <p><strong>Week 3:</strong> Data pipelines, ELT &amp; ETL concepts</p>
+            </div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black px-6 py-3 font-bold text-base" style="background-color:#F3D053">
+              Phase 2: Distributed Processing &amp; Streaming
+            </div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black bg-white px-6 py-4 text-left text-sm w-full max-w-xl">
+              <p>
+                <strong>Week 4–5:</strong> Batch big data processing, MapReduce, Apache Hadoop, Kafka, and Spark
+              </p>
+              <p><strong>Week 6:</strong> DevOps, containers (Docker), and data science reproducibility</p>
+            </div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black px-6 py-3 font-bold text-base" style="background-color:#F3D053">
+              Phase 3: Deployment, MLOps &amp; LLMOps
+            </div>
+            <div class="w-px h-4 bg-black" aria-hidden="true"></div>
+            <div class="border-2 border-black bg-white px-6 py-4 text-left text-sm w-full max-w-xl">
+              <p>
+                <strong>Week 7–8:</strong> Microservices, serverless architectures, managing ML deployments, LLMOps
+                and RAG workflows
+              </p>
+              <p>
+                <strong>Week 9–10:</strong> Serving &amp; scaling ML models, production data science, and decentralised
+                architectures
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex flex-col gap-6">
+            <div class="space-y-3">
+              <h3 class="text-xl font-semibold">Results &amp; grades</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm border-2 border-black bg-white shadow-[3px_3px_0_rgba(0,0,0,0.2)]">
+                  <thead class="bg-black text-white">
+                    <tr>
+                      <th class="px-3 py-2 text-left font-semibold border-r border-white whitespace-normal break-words">
+                        Assessment
+                      </th>
+                      <th class="px-3 py-2 text-left font-semibold whitespace-normal break-words">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {
+                      data_engineering_ucl.results.map((item) => (
+                        <tr class="bg-white">
+                          <td class="px-3 py-2 border-t border-black/20 align-top whitespace-normal break-words">
+                            <p>{item.assessment}</p>
+                            {item.focus && (
+                              <p class="text-xs text-black/70 mt-0.5">{item.focus}</p>
+                            )}
+                          </td>
+                          <td class="px-3 py-2 border-t border-black/20 align-top whitespace-normal break-words">{item.grade}</td>
+                        </tr>
+                      ))
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <h3 class="text-xl font-semibold">Topics &amp; technologies covered</h3>
+              <ul class="flex flex-wrap gap-2">
+                {
+                  data_engineering_ucl.topics.map((topic) => (
+                    <li class="border-2 border-black bg-white px-3 py-1.5 text-sm shadow-[3px_3px_0_rgba(0,0,0,0.2)]">{topic}</li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+          <div class="overflow-hidden min-h-0 flex items-center justify-center border-2 border-black bg-white">
+            <Image
+              src={imgUclDataEngineeringCourseStructure}
+              alt="UCL School of Management Data Engineering module: 10-week course structure (topics, workshops, assignments by week)"
+              class="w-full h-auto object-contain p-2"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -100,6 +100,10 @@ To make the platform scalable, cost-effective, and user-friendly, I broke it int
 
 ![System Architecture](../../assets/projects/slt/slt_system_architecture.png)
 
+BrightData delivers raw Reddit and Quora payloads; Apps Script and Cloud Functions orchestrate loads into BigQuery, where SQL merges and
+cleansing produce a single analysis-ready view for embeddings, clustering, and reporting—so downstream jobs never fork on inconsistent schemas.
+
+![Data integration: Reddit and Quora unified in BigQuery](../../assets/data_integration_social.png)
 
 ---
 
@@ -126,6 +130,18 @@ I focused on making the tool genuinely useful and accessible for consultants:
     - LLM-generated topic summaries
 - Each analysis run produces a unique, shareable report tailored to the client's needs
 - The workflow enables consultants to go from question to insight with minimal technical friction
+
+The reporting layer ties curated BigQuery tables to charts that show how raw posts roll up into topics, sentiment, and run-level metadata—so
+consultants can validate the pipeline without opening SQL.
+
+![Looker dashboard: schema context, topic map, sentiment, run summary](../../assets/dashboard_development_social_listening.png)
+
+For exec-facing reviews, slide-style summaries recap the same signals in a familiar deck format, and a single narrative diagram explains how
+mobile conversations flow into storage, modelling, and charts.
+
+![Slide mockup overview](../../assets/social-listening-tool-slides-mockup.png)
+
+![End-to-end social listening story: capture, table, charts](../../assets/social_listening_diagram.png)
 
 ---
 
