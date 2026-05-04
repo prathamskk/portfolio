@@ -1,4 +1,4 @@
-# Pratham's Marketing Portfolio
+# Pratham's Portfolio
 
 Portfolio site showcasing projects in **Analytics**, **Tech**, and **Creative** — MSc Business Analytics (UCL), based in London.
 
