@@ -5,19 +5,20 @@ image:
   url: "/projects/learnsbar/learnsbar2.png"
   alt: "LearnSBAR training platform"
 pubDate: "July 2022"
-corners:
-  - tech
-  - creative
 techStack:
   - React
   - Vite
   - Typescript
   - AWS
   - DynamoDB
+  - AWS Lambda
+  - S3
   - Voice Transcription
 project_for:
   label: University of Mumbai
   icon: ri-bank-line
+github: https://github.com/prathamskk/learnSBAR
+
 summary: "A training platform that helps nurses practice and improve their patient handoff communication skills through practice scenarios, instant feedback, and progress tracking, with voice recording that automatically converts speech to text for easier review."
 ---
 

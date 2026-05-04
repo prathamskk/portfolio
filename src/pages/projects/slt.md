@@ -5,22 +5,23 @@ image:
   url: "/projects/slt/slt_banner.png"
   alt: "SLT Social Listening Tool"
 pubDate: "July 2025"
-corners:
-  - tech
-  - analytics
 techStack:
   - Web Scraping
+  - Bright Data
   - BigQuery
   - Data Pipeline
   - Topic Modelling
-  - Looker
+  - Looker Studio
   - K-Means
   - GCP
   - Vertex AI
+  - BigQuery ML
   - Gemini
 project_for:
   label: Sense Worldwide x UCL
   icon: ri-building-4-line
+github: https://github.com/prathamskk/social-listening-tool-dissertation
+
 summary: "A powerful tool built for Sense Worldwide, an innovation consulting company, that collects and analyzes social media conversations to identify trends and patterns, presenting key findings through easy-to-use interactive charts and reports."
 ---
 

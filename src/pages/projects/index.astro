@@ -1,0 +1,51 @@
+---
+import '../../styles/global.css'
+import Layout from '../../layouts/Layout.astro'
+
+import AppHeader from '../../components/Header.astro'
+import AppFooter from '../../components/Footer.astro'
+import CornerProjectCard from '../../components/CornerProjectCard.astro'
+import CallToAction from '../../components/CallToAction.astro'
+
+const allPosts = Object.values(import.meta.glob<{ frontmatter: any; url: string }>('./*.md', { eager: true }))
+
+function pubDateTs(pubDate: string | undefined): number {
+  if (!pubDate) return 0
+  const t = Date.parse(pubDate)
+  return Number.isFinite(t) ? t : 0
+}
+
+const projects = allPosts
+  .filter(({ frontmatter }: any) => Boolean(frontmatter?.title && frontmatter?.layout))
+  .sort((a: any, b: any) => {
+    const dt = pubDateTs(b.frontmatter?.pubDate) - pubDateTs(a.frontmatter?.pubDate)
+    if (dt !== 0) return dt
+    const ta = String(a.frontmatter?.title ?? '')
+    const tb = String(b.frontmatter?.title ?? '')
+    return ta.localeCompare(tb)
+  })
+---
+
+<Layout title="Projects">
+  <AppHeader />
+
+  <section class="py-40 px-1 sm:px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-15">
+        <h1 class="title text-5xl font-black">Projects</h1>
+        <p class="mt-4 text-gray-600 text-lg">Writing, pipelines, coursework, and side projects.</p>
+      </div>
+
+      <div class="flex flex-col gap-10 md:gap-12">
+        {
+          projects.map(({ url, frontmatter }: any) => (
+            <CornerProjectCard url={url} frontmatter={frontmatter} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CallToAction variant="engineering" />
+  <AppFooter />
+</Layout>

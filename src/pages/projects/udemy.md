@@ -5,8 +5,6 @@ image:
   url: "/projects/udemy/udemy_banner.png"
   alt: "Udemy project"
 pubDate: "Nov 2024"
-corners:
-  - analytics
 techStack:
   - Web Scraping
   - Machine Learning

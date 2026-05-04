@@ -5,17 +5,20 @@ image:
   url: "/projects/instacart/instacart_banner.png"
   alt: "Instacart project"
 pubDate: "Feb 2025"
-corners:
-  - analytics
 techStack:
   - XGBoost
   - EDA
   - Python
+  - Pandas
   - Data Visualization
   - Machine Learning
+  - Feature Engineering
+  - SHAP
 project_for:
   label: University College London
   icon: ri-line-chart-line
+github: https://github.com/prathamskk/instacart-customer-purchase-prediction
+
 summary: "Leveraged XGBoost and customer purchase history to predict product reorder probability with 70% accuracy, analyzing 3 million orders and 50,000 products to help stores manage inventory better and improve the shopping experience."
 ---
 

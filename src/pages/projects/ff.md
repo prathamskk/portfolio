@@ -5,17 +5,19 @@ image:
   url: "/projects/zaika/zaika_website.jpg"
   alt: "Food Fiesta website"
 pubDate: "Feb 2023"
-corners:
-  - creative
 techStack:
   - HTML
   - CSS
   - Javascript
   - Parcel
   - Bootstrap
+  - SASS
+  - jQuery
 project_for:
   label: Entrepreneurship Cell
   icon: ri-building-3-line
+github: https://github.com/nat0910/food-fiesta-student-portal
+
 summary: "A vibrant website promoting our college's Food Fiesta event and our new food ordering app, with details about the festival, featured food items, and easy ways to order through the app."
 ---
 

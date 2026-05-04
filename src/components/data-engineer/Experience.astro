@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import svgUnderline from '../../assets/underline.svg'
+
+import imgSenseLogo from '../../assets/company/sense-worldwide.jpg';
+import imgEcellLogo from '../../assets/company/ecell-logo.png';
+import imgUCLLogo from '../../assets/company/ucl_school_of_management_logo.jpg';
+
+const experiences = [
+  {
+    company: 'Sense Worldwide',
+    role: 'Data Engineer Intern',
+    period: 'May 2025 – Aug 2025',
+    location: 'London',
+    logo: imgSenseLogo,
+    description:
+      'Built an AI tool for social media analysis with data scientists and consultants, saving 20+ hours per client. Engineered scalable pipelines on GCP (Pub/Sub, BigQuery, Cloud Functions) and designed Looker dashboards for trends and reporting.',
+    },
+  {
+    company: 'UCL',
+    role: 'MSc Dissertation — AI Social Listening Platform (Sense Worldwide)',
+    period: 'Apr 2025 – Aug 2025',
+    location: 'London',
+    logo: imgUCLLogo,
+    description:
+      'Designed a cloud-native social listening stack: robust collection, orchestration with Cloud Functions and Apps Script, Vertex AI/Gemini for topic modelling and summarisation, and BigQuery plus Looker for consultant-ready insights.',
+  },
+  {
+    company: 'UCL',
+    role: 'Data Engineering (module)',
+    period: 'Jan 2025 – Mar 2025',
+    location: 'London',
+    logo: imgUCLLogo,
+    description:
+      'Software engineering for large datasets — architecture, implementation, and quality practices for dependable data systems.'
+  },
+  {
+    company: 'Entrepreneurship Cell, SAKEC',
+    role: 'Technical Head',
+    period: '2020 – 2022',
+    location: 'Mumbai',
+    logo: imgEcellLogo,
+    description:
+      'Led Zaika festival ordering app and event web delivery; coached junior developers on shipping and production readiness.',
+  },
+]
+---
+
+<section class="py-20 space-y-10 px-5" id="experience">
+  <div class="max-w-md mx-auto relative">
+    <h1 class="text-4xl font-medium text-center">experience.</h1>
+    <img src={svgUnderline.src} alt="underline" width="140" class="absolute left-35 -bottom-2" />
+  </div>
+
+  <div class="max-w-4xl mx-auto relative">
+    <div class="pointer-events-none absolute left-6 top-0 bottom-0 w-[2px] bg-black md:left-8"></div>
+
+    <div class="space-y-8 relative">
+      {experiences.map((item) => (
+        <div class="border-2 bg-white p-4 md:p-6 flex gap-4 md:gap-6 items-start relative">
+          <div class="w-12 h-12 md:w-14 md:h-14 overflow-hidden border-2 bg-black flex items-center justify-center shrink-0">
+            <Image src={item.logo} alt={`${item.company} logo`} width={56} height={56} class="w-full h-full object-contain" />
+          </div>
+          <div class="space-y-2">
+            <h2 class="text-xl font-medium">
+              {item.company} - {item.role}
+            </h2>
+            <p class="text-xs uppercase tracking-wide text-gray-500">
+              {item.period} · {item.location}
+            </p>
+            <p class="text-base">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

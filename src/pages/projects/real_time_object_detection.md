@@ -5,8 +5,6 @@ image:
   url: "/projects/real_time_object_detection/objectdetection.png"
   alt: "Real-time object detection"
 pubDate: "Apr 2024"
-corners:
-  - tech
 techStack:
   - OpenCV
   - YOLOv8
@@ -17,6 +15,8 @@ techStack:
 project_for:
   label: Bhabha Atomic Research Centre
   icon: ri-instance-line
+github: https://github.com/prathamskk/object-detection-conveyor-belt-with-camera-calibration
+
 summary: "Built a real-time object detection system at BARC Robotics using YOLOv8 and OpenCV, calibrating cameras for accurate position measurement and improving performance by training on a mix of real and synthetic images."
 ---
 

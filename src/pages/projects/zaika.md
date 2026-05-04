@@ -5,15 +5,17 @@ image:
   url: "/projects/zaika/zaika_usage_thumbnail.jpg"
   alt: "Zaika food ordering app"
 pubDate: "Mar 2023"
-corners:
-  - tech
-  - creative
 techStack:
   - React
   - Vite
   - Firebase
+  - Firestore
+  - Cloud Functions
+  - Firebase Authentication
+  - App Check
   - NoSQL
-  - GCP
+  - JavaScript
+  - Material UI
 project_for:
   label: Entrepreneurship Cell
   icon: ri-building-3-line

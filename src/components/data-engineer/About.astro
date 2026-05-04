@@ -1,0 +1,28 @@
+---
+const content = {
+  intro: `I'm a master's graduate focused on scalable data and ML pipelines, agentic tooling, and cloud-native delivery.`,
+  highlight: 'hands-on internships and end-to-end platform work',
+  context: `I've built ingestion and transformation on GCP and Azure, optimized batch processing with Spark, and paired LLM-powered workflows with observant engineering (Docker, Git, reproducible notebooks).`,
+  closing: `I care about dependable pipelines, clean layered data stores, and making complex systems easy for teams to run and extend.`,
+}
+---
+
+<section class="py-20 px-5 md:px-10" id="about">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+      <div class="border-2 border-black bg-white p-5 md:p-6 shadow-[6px_6px_0_rgba(0,0,0,0.3)] flex flex-col justify-center">
+        <p class="text-sm uppercase tracking-widest text-black/70 mb-3">Who I am</p>
+        <p class="text-xl md:text-2xl font-normal leading-snug">{content.intro}</p>
+      </div>
+      <div class="md:col-span-2 border-2 border-black bg-[var(--yellow,#FDE047)] p-5 md:p-8 shadow-[6px_6px_0_rgba(0,0,0,0.3)] flex flex-col justify-center">
+        <p class="text-sm uppercase tracking-widest text-black/70 mb-2">Experience</p>
+        <p class="text-xl font-medium">{content.highlight}</p>
+        <p class="text-lg mt-2 text-black/80">{content.context}</p>
+      </div>
+      <div class="md:col-span-3 border-2 border-black bg-white p-5 md:p-8 shadow-[6px_6px_0_rgba(0,0,0,0.3)]">
+        <p class="text-sm uppercase tracking-widest text-black/60 mb-3">What I do</p>
+        <p class="text-lg md:text-xl leading-relaxed">{content.closing}</p>
+      </div>
+    </div>
+  </div>
+</section>

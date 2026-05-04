@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { getImage } from '../lib/images';
+import { getImage, projectImagePublicUrl } from '../lib/images';
 import arrowCard from '../assets/arrow-card.svg'
 
 interface Props {
@@ -9,13 +9,16 @@ interface Props {
 }
 
 const { url, frontmatter } = Astro.props;
-const base = import.meta.env.BASE_URL;
-const projectImage = frontmatter?.image?.url ? getImage(frontmatter.image.url.replace(/^\//, '')) : undefined;
+const normalized = frontmatter?.image?.url?.replace(/^\//, '').replace(/\\/g, '/') ?? '';
+const projectImageAsset = normalized ? getImage(normalized) : undefined;
+const projectImagePublic = normalized ? projectImagePublicUrl(normalized) : '';
+const thumbAlt = frontmatter?.image?.alt ?? frontmatter?.title ?? '';
 ---
 
+<div class="bg-white border-2 border-black shadow-[8px_8px_0px_rgba(0,0,0,0.3)]">
 <a
   href={url}
-  class="block bg-white p-4 sm:p-5 border-2 border-black transition-all duration-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)] sm:flex sm:flex-row sm:flex-wrap sm:gap-6 sm:items-start"
+  class="block p-4 sm:p-5 sm:flex sm:flex-row sm:flex-wrap sm:gap-6 sm:items-start"
 >
   <!-- Left: title + content only (no footer inside) -->
   <div class="min-w-0 sm:flex-1 sm:min-w-0">
@@ -40,14 +43,16 @@ const projectImage = frontmatter?.image?.url ? getImage(frontmatter.image.url.re
       <h2 class="flex-1 min-w-0 line-clamp-3 text-lg sm:text-xl font-bold text-black leading-snug">
         {frontmatter.title}
       </h2>
-      <div class="w-24 h-20 sm:hidden rounded-lg border-2 border-gray-200 overflow-hidden flex-shrink-0">
-        {projectImage && (
+      <div class="w-24 h-20 sm:hidden rounded-lg border-2 border-gray-200 overflow-hidden flex-shrink-0 bg-gray-100">
+        {projectImageAsset ? (
           <Image
-            src={projectImage}
-            alt=""
+            src={projectImageAsset}
+            alt={thumbAlt}
             class="w-full h-full object-cover"
           />
-        )}
+        ) : projectImagePublic ? (
+          <img src={projectImagePublic} alt={thumbAlt} class="w-full h-full object-cover" loading="lazy" decoding="async" />
+        ) : null}
       </div>
     </div>
 
@@ -58,19 +63,23 @@ const projectImage = frontmatter?.image?.url ? getImage(frontmatter.image.url.re
     )}
   </div>
 
-  <div class="hidden sm:block sm:w-[160px] sm:h-[107px] sm:flex-shrink-0 rounded-lg border-2 border-gray-200 overflow-hidden">
-    {projectImage && (
+  <div class="hidden sm:block sm:w-[160px] sm:h-[107px] sm:flex-shrink-0 rounded-lg border-2 border-gray-200 overflow-hidden bg-gray-100">
+    {projectImageAsset ? (
       <Image
-        src={projectImage}
-        alt=""
+        src={projectImageAsset}
+        alt={thumbAlt}
         class="w-full h-full object-cover"
       />
-    )}
+    ) : projectImagePublic ? (
+      <img src={projectImagePublic} alt={thumbAlt} class="w-full h-full object-cover" loading="lazy" decoding="async" />
+    ) : null}
   </div>
 
-  <!-- Footer: full width below content + thumbnail on desktop -->
-  <div class="w-full flex flex-wrap items-center justify-between gap-2 mt-4 pt-3 border-t border-gray-100">
-    <div class="flex flex-wrap items-center gap-2 min-w-0">
+</a>
+
+  <!-- Footer outside card link so GitHub can be its own anchor -->
+  <div class="flex flex-wrap items-center justify-between gap-2 px-4 sm:px-5 pb-4 pt-0 mt-0 border-t border-gray-100">
+    <div class="flex flex-wrap items-center gap-2 min-w-0 pt-3">
       {(frontmatter.techStack ?? []).slice(0, 3).map((tag: string) => (
         <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 border border-gray-200">
           {tag}
@@ -89,10 +98,21 @@ const projectImage = frontmatter?.image?.url ? getImage(frontmatter.image.url.re
         </span>
       )}
     </div>
-    <div class="hidden sm:flex items-center gap-1 flex-shrink-0">
+    <div class="flex items-center gap-2 flex-shrink-0 pt-3">
+      {frontmatter.github && (
+        <a
+          href={frontmatter.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-1.5 text-gray-700 hover:text-black"
+          aria-label="View repository on GitHub"
+        >
+          <i class="ri-github-fill text-xl"></i>
+        </a>
+      )}
       <span class="p-1.5 text-gray-400" aria-hidden="true"><i class="ri-bookmark-line text-lg"></i></span>
       <span class="p-1.5 text-gray-400" aria-hidden="true"><i class="ri-more-fill text-lg"></i></span>
-      <img src={arrowCard.src} alt="arrow" width="25" class="p-1"/>
+      <img src={arrowCard.src} alt="" width="25" class="p-1" aria-hidden="true"/>
     </div>
   </div>
-</a>
+</div>

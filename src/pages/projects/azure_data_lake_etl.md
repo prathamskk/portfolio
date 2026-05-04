@@ -5,8 +5,6 @@ image:
   url: "/projects/azure_data_lake_etl/azure_banner.png"
   alt: "Azure ecosystem overview"
 pubDate: "Jun 2025"
-corners:
-  - tech
 techStack:
   - Azure SQL Database
   - Azure Data Factory
@@ -14,11 +12,15 @@ techStack:
   - Azure Storage Account (ADLS Gen2)
   - Azure Databricks & Spark
   - DBT (Data Build Tool)
+  - ETL Orchestration
+  - Data Modeling / Marts
   - Medallion Architecture (Bronze, Silver, Gold)
-  - Parquet & Delta
+  - Parquet
+  - Delta Lake
 project_for:
   label: Personal Project
   icon: ri-code-line
+github: https://github.com/prathamskk/Azure-Spark-DBT-Medallion
 
 summary: "A modern data platform on Azure that ingests e-commerce data into an ADLS Gen2 data lake, uses Azure Data Factory and Databricks to transform it through medallion (bronze, silver, gold) layers, and builds analytics-ready marts with DBT."
 ---

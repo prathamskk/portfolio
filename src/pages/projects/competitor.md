@@ -5,8 +5,6 @@ image:
   url: "/projects/competitor/competitor_banner.png"
   alt: "AI Competitor Intelligence Tool"
 pubDate: "Mar 2025"
-corners:
-  - tech
 techStack:
   - RAG
   - Gen AI
@@ -15,9 +13,15 @@ techStack:
   - Streamlit
   - RAG Evaluation
   - Spark
+  - Python
+  - Data Pipeline
+  - Parquet
+  - Docker
 project_for:
   label: University College London
   icon: ri-code-line
+github: https://github.com/prathamskk/ucl_rag_mcp_ai_competitor_intelligence_tool
+
 summary: "Designed an AI RAG system to analyze ~3 million tweets and understand social media customer support, optimizing a Python pipeline by converting it to Spark (cutting processing time from 2 hours to 5 minutes) and wrapping it in a user-friendly Streamlit web app."
 ---
 

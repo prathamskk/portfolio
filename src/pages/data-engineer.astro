@@ -1,0 +1,40 @@
+---
+import '../styles/global.css'
+import Layout from "../layouts/Layout.astro"
+
+import Header from '../components/data-engineer/Header.astro'
+import Hero from '../components/data-engineer/Hero.astro'
+import Tools from '../components/data-engineer/Tools.astro'
+import Footer from '../components/data-engineer/Footer.astro'
+import Reviews from '../components/data-engineer/Reviews.astro'
+import CallToAction from '../components/data-engineer/CallToAction.astro'
+import MoreProjectsCard from '../components/MoreProjectsCard.astro'
+import Works from '../components/data-engineer/Works.astro'
+import Domain from '../components/data-engineer/Domain.astro'
+import Experience from '../components/data-engineer/Experience.astro'
+import Skills from '../components/data-engineer/Skills.astro'
+import About from '../components/data-engineer/About.astro'
+import NotableProjects from '../components/data-engineer/NotableProjects.astro'
+
+---
+
+<Layout
+  title="Data Engineer"
+  description="Data Engineer portfolio — ETL, cloud data platforms, Spark, Python, and scalable pipelines. MSc Business Analytics (UCL)."
+>
+  <Header />
+  <Hero />
+  <Tools />
+  <Domain />
+
+  <About />
+
+  <Experience />
+  <Skills />
+  <NotableProjects />
+  <!-- <Works /> -->
+  <Reviews />
+  <MoreProjectsCard />
+  <CallToAction />
+  <Footer />
+</Layout>

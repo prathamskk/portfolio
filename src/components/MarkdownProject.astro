@@ -1,32 +1,23 @@
 ---
 import { Image } from 'astro:assets';
-import { getImage } from '../lib/images';
+import { getImage, projectImagePublicUrl } from '../lib/images';
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 
 import AppHeader from './Header.astro';
 import AppFooter from './Footer.astro';
 import CallToAction from './CallToAction.astro';
-import RelatedProjects from './RelatedProjects.astro';
-import OtherCorners from './OtherCorners.astro';
+import MoreProjectsCard from './MoreProjectsCard.astro';
 
 const styleSheet = {
     meta: 'text-gray-500 flex items-center gap-2',
 }
 
 const { frontmatter } = Astro.props;
-const techStack = frontmatter.techStack ?? [];
-const base = import.meta.env.BASE_URL;
-
-// Load all projects and filter to same corner(s), excluding current
-const allProjects = Object.values(import.meta.glob<{ frontmatter: any; url: string }>('../pages/projects/*.md', { eager: true }));
-const currentPath = Astro.url.pathname.replace(/\/$/, '');
-const currentCorners = frontmatter.corners ?? [];
-const relatedProjects = allProjects.filter((p: any) => {
-  const sameCorner = currentCorners.length && p.frontmatter?.corners?.some((c: string) => currentCorners.includes(c));
-  const notCurrent = (p.url ?? '').replace(/\/$/, '') !== currentPath;
-  return sameCorner && notCurrent;
-});
+const heroNormalized = frontmatter.image?.url?.replace(/^\//, '').replace(/\\/g, '/') ?? '';
+const heroAsset = heroNormalized ? getImage(heroNormalized) : undefined;
+const heroPublicUrl = heroNormalized ? projectImagePublicUrl(heroNormalized) : '';
+const heroAlt = frontmatter.image?.alt ?? frontmatter.title;
 ---
 
 <Layout title={frontmatter.title}>
@@ -34,26 +25,26 @@ const relatedProjects = allProjects.filter((p: any) => {
 <AppHeader />
 
 <section class="p-3">
-    <div class="max-w-7xl mx-auto mt-10 mb-30 grid justify-items-center gap-16 xl:gap-4 xl:grid-cols-[auto_1fr]">
-        <!-- Main content -->
-        <div class="max-w-3xl p-3 bg-white flex flex-col gap-7 border-3">
+    <div class="max-w-5xl mx-auto mt-10 mb-30">
+        <div class="w-full min-w-0 p-3 bg-white flex flex-col gap-7 border-3">
 
-                {frontmatter.image?.url && (() => {
-                    const img = getImage(frontmatter.image.url.replace(/^\//, ''));
-                    return img ? (
+                {(heroAsset || heroPublicUrl) && (
                     <div class="w-full aspect-video border-2 overflow-hidden bg-gray-100">
-                        <Image
-                            src={img}
-                            alt={frontmatter.image.alt ?? frontmatter.title}
+                        {heroAsset ? (
+                          <Image
+                            src={heroAsset}
+                            alt={heroAlt}
                             class="w-full h-full object-cover object-center"
-                        />
+                          />
+                        ) : (
+                          <img src={heroPublicUrl} alt={heroAlt} class="w-full h-full object-cover object-center" loading="eager" decoding="async" />
+                        )}
                     </div>
-                    ) : null;
-                })()}
+                )}
                 <h1 class="title text-4xl font-black">{frontmatter.title}</h1>
 
                 <div class="flex flex-col">
-                    <div class="flex flex-wrap items-center gap-3 border-t border-b border-gray-100 mb-5 py-4">
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-3 border-t border-b border-gray-100">
                         {frontmatter.pubDate && (
                             <span class={styleSheet.meta}><i class="ri-calendar-line text-xl"></i> {frontmatter.pubDate}</span>
                         )}
@@ -64,22 +55,33 @@ const relatedProjects = allProjects.filter((p: any) => {
                         ))}
 
                     </div>
-                <div class="prose prose-lg max-w-none">
+                    {frontmatter.github && (
+                        <div class="mt-2 mb-14">
+                            <a
+                              href={frontmatter.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="inline-flex items-center justify-center gap-2.5 basis-full sm:basis-auto w-full sm:w-auto min-h-[44px] px-5 py-2.5 border-2 border-black bg-[#24292f] text-white text-base font-bold shadow-[6px_6px_0_rgba(0,0,0,0.35)] hover:bg-[#1c2128] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                            >
+                              <i class="ri-github-fill text-2xl leading-none" aria-hidden="true"></i>
+                              <span>View on GitHub</span>
+                              <i class="ri-external-link-line text-lg leading-none opacity-90" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    )}
+                <div class="prose prose-lg max-w-none prose-img:mx-auto prose-img:block prose-figure:mx-auto prose-figcaption:text-center">
                     <slot />
                 </div>
             </div>
         </div>
-        <!-- Related projects: stacks below on small screens, right column + sticky on xl -->
-        <aside class="mt-10 xl:mt-0 xl:sticky xl:top-24 self-start">
-            <RelatedProjects relatedProjects={relatedProjects} />
-        </aside>
     </div>
 
 </section>
 
 
-<OtherCorners currentCorner={currentCorners[0]} />
-<CallToAction />
+<MoreProjectsCard />
+
+<CallToAction variant="engineering" />
 <AppFooter />
 
 </Layout>

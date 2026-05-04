@@ -5,8 +5,6 @@ image:
   url: "/projects/situation_analysis_bubble_tea/bubble_tea_banner.png"
   alt: "Situation analysis and marketing frameworks for beverage retail"
 pubDate: "Feb 2025"
-corners:
-  - analytics
 techStack:
   - 5C's Marketing Framework
   - STP
