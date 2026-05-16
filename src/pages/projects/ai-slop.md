@@ -1,6 +1,9 @@
 ---
 layout: ../../components/MarkdownProject.astro
 title: "No more - AI Slop. Modern Image Gen workflow"
+image:
+  url: "/projects/ai_slop/layer_composition.png"
+  alt: "AI Image Generation Workflow"
 pubDate: "May 2026"
 techStack:
   - AI
