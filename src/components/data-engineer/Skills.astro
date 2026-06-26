@@ -1,69 +1,99 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import imgMicrosoft365 from '../../assets/logos/microsoft-365-logo.jpg';
-import imgUdemy from '../../assets/logos/udemy-logo.png';
-import imgTopSql from '../../assets/Top_SQL_50.gif';
+import imgMicrosoft365 from "../../assets/logos/microsoft-365-logo.jpg";
+import imgUdemy from "../../assets/logos/udemy-logo.png";
+import imgTopSql from "../../assets/Top_SQL_50.gif";
 
-import svgPowerBI from '../../assets/logos/powerbi-logo.svg';
-import svgBigQuery from '../../assets/logos/google-bigquery-logo.svg';
-import svgDatabricks from '../../assets/logos/databricks-logo.svg';
-import imgLookerStudio from '../../assets/logos/looker_studio_logo.jpg';
-import imgChatGPT from '../../assets/logos/ChatGPT_logo.svg.png';
-import svgCopilot from '../../assets/logos/github_copilot-icon.svg';
-import svgPython from '../../assets/logos/Python-logo.svg';
+import svgPowerBI from "../../assets/logos/powerbi-logo.svg";
+import svgBigQuery from "../../assets/logos/google-bigquery-logo.svg";
+import svgDatabricks from "../../assets/logos/databricks-logo.svg";
+import imgLookerStudio from "../../assets/logos/looker_studio_logo.jpg";
+import imgChatGPT from "../../assets/logos/ChatGPT_logo.svg.png";
+import svgCopilot from "../../assets/logos/github_copilot-icon.svg";
+import svgPython from "../../assets/logos/Python-logo.svg";
+import sql from "../../assets/logos/sql.webp";
+import googleAnalytics from "../../assets/logos/google_analytics-icon.svg";
+import metaAds from "../../assets/logos/meta-logo.jpg";
 
 const skills = [
-  'Python',
-  'SQL',
-  'Spark',
-  'ETL',
-  'Data Engineering',
-  'BigQuery',
-  'GCP',
-  'Azure',
-  'AWS',
-  'DBT',
-  'Docker',
-  'Git',
-]
+  "Python",
+  "SQL",
+  "Spark",
+  "ETL",
+  "Data Engineering",
+  "BigQuery",
+  "GCP",
+  "Azure",
+  "AWS",
+  "DBT",
+  "Docker",
+  "Git",
+];
 
 const toolGroups = [
   {
-    name: 'Languages & scripting',
+    name: "Languages & scripting",
     tools: [
-      { name: 'Python', logo: { svg: svgPython, alt: 'Python logo' } },
-      { name: 'Spreadsheets', logo: { img: imgMicrosoft365, alt: 'Microsoft 365 logo' } },
-      { name: 'Online courses stack', logo: { img: imgUdemy, alt: 'Udemy logo' } },
+      { name: "Python", logo: { svg: svgPython, alt: "Python logo" } },
+
+      { name: "SQL", logo: { svg: sql, alt: "SQL logo" } },
     ],
   },
   {
-    name: 'Data platforms',
+    name: "Data platforms",
     tools: [
-      { name: 'BigQuery', logo: { svg: svgBigQuery, alt: 'Google BigQuery logo' } },
-      { name: 'Databricks', logo: { svg: svgDatabricks, alt: 'Databricks logo' } },
-      { name: 'Looker Studio', logo: { img: imgLookerStudio, alt: 'Looker Studio logo' } },
+      {
+        name: "BigQuery",
+        logo: { svg: svgBigQuery, alt: "Google BigQuery logo" },
+      },
+      {
+        name: "Databricks",
+        logo: { svg: svgDatabricks, alt: "Databricks logo" },
+      },
     ],
   },
   {
-    name: 'BI & delivery',
+    name: "Business Intelligence",
     tools: [
-      { name: 'Power BI', logo: { svg: svgPowerBI, alt: 'Microsoft Power BI logo' } },
-      { name: 'ChatGPT & LLMs', logo: { img: imgChatGPT, alt: 'OpenAI ChatGPT logo' } },
-      { name: 'GitHub Copilot', logo: { svg: svgCopilot, alt: 'GitHub Copilot logo' } },
+      {
+        name: "Looker Studio",
+        logo: { img: imgLookerStudio, alt: "Looker Studio logo" },
+      },
+      {
+        name: "Power BI",
+        logo: { svg: svgPowerBI, alt: "Microsoft Power BI logo" },
+      },
+      {
+        name: "Spreadsheets",
+        logo: { img: imgMicrosoft365, alt: "Microsoft 365 logo" },
+      },
     ],
   },
-]
+  {
+    name: "MarTech",
+    tools: [
+      {
+        name: "GA4 & Google Tag Manager",
+        logo: { img: googleAnalytics, alt: "GA4 & Google Tag Manager logo" },
+      },
+      {
+        name: "Meta Ads Manager",
+        logo: { img: metaAds, alt: "Meta Ads Manager logo" },
+      },
+    ],
+  },
+];
 
 const achievements = [
   {
-    name: 'Top SQL 50',
-    provider: 'LeetCode',
-    desc: 'Solid SQL fundamentals for warehousing, transformations, and analytics engineering interviews.',
-    period: '',
+    name: "Top SQL 50",
+    provider: "LeetCode",
+    desc: "LeetCode's curated list of 50 essential basic to intermediate SQL problems.",
+    period: "",
     logo: imgTopSql,
   },
-]
+];
 ---
 
 <section class="py-20 px-5 bg-[var(--bg-color, #fdfaf4)]" id="skills">
@@ -74,55 +104,85 @@ const achievements = [
     </div>
 
     <div class="flex flex-wrap gap-3 justify-center md:justify-start">
-      {skills.map((item) => (
-        <span class="inline-flex items-center rounded-full border-2 border-black/60 bg-white px-4 py-1 text-sm md:text-base shadow-[3px_3px_0_rgba(0,0,0,0.3)]">
-          {item}
-        </span>
-      ))}
+      {
+        skills.map((item) => (
+          <span class="inline-flex items-center rounded-full border-2 border-black/60 bg-white px-4 py-1 text-sm md:text-base shadow-[3px_3px_0_rgba(0,0,0,0.3)]">
+            {item}
+          </span>
+        ))
+      }
     </div>
 
     <div class="space-y-6 pt-6">
       <h3 class="text-3xl font-medium">tools.</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {toolGroups.map((group) => (
-          <div class="border-2 bg-white p-4 md:p-5 shadow-[4px_4px_0_rgba(0,0,0,0.25)] space-y-4">
-            <h4 class="text-lg font-medium">{group.name}</h4>
-            <div class="flex flex-wrap content-center">
-              {group.tools.map((tool) => (
-                <div class="flex flex-col items-center gap-2 w-24 text-center">
-                  <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-xl border-2 border-black/20 bg-white flex items-center justify-center overflow-hidden shadow-[3px_3px_0_rgba(0,0,0,0.2)]">
-                    {tool.logo.img ? (
-                      <Image src={tool.logo.img} alt={tool.logo.alt} width={56} height={56} class="w-full h-full object-contain p-1" />
-                    ) : (
-                      <img src={tool.logo.svg.src} alt={tool.logo.alt} class="w-full h-full object-contain p-1" />
-                    )}
+        {
+          toolGroups.map((group) => (
+            <div class="border-2 bg-white p-4 md:p-5 shadow-[4px_4px_0_rgba(0,0,0,0.25)] space-y-4">
+              <h4 class="text-lg font-medium">{group.name}</h4>
+              <div class="flex flex-wrap content-center">
+                {group.tools.map((tool) => (
+                  <div class="flex flex-col items-center gap-2 w-24 text-center">
+                    <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-xl border-2 border-black/20 bg-white flex items-center justify-center overflow-hidden shadow-[3px_3px_0_rgba(0,0,0,0.2)]">
+                      {tool.logo.img ? (
+                        <Image
+                          src={tool.logo.img}
+                          alt={tool.logo.alt}
+                          width={56}
+                          height={56}
+                          class="w-full h-full object-contain p-1"
+                        />
+                      ) : (
+                        <img
+                          src={tool.logo.svg.src}
+                          alt={tool.logo.alt}
+                          class="w-full h-full object-contain p-1"
+                        />
+                      )}
+                    </div>
+                    <span class="text-sm font-medium leading-tight">
+                      {tool.name}
+                    </span>
                   </div>
-                  <span class="text-sm font-medium leading-tight">{tool.name}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
 
     <div class="border-t-2 border-black/10 pt-8 mt-4 space-y-4">
       <h3 class="text-3xl font-medium">achievement.</h3>
       <ul class="space-y-3">
-        {achievements.map((achieve) => (
-          <li class="flex items-center gap-4 border-2 bg-white px-4 py-3 shadow-[3px_3px_0_rgba(0,0,0,0.25)]">
-            <div class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center overflow-hidden shrink-0">
-              <Image src={achieve.logo} alt="Top SQL 50 achievement badge" width={56} height={56} class="w-full h-full object-contain" />
-            </div>
-            <div class="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-3">
-              <div>
-                <p class="font-medium">{achieve.name} - {achieve.provider}</p>
-                <p class="text-sm text-gray-600">{achieve.desc}</p>
+        {
+          achievements.map((achieve) => (
+            <li class="flex items-center gap-4 border-2 bg-white px-4 py-3 shadow-[3px_3px_0_rgba(0,0,0,0.25)]">
+              <div class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center overflow-hidden shrink-0">
+                <Image
+                  src={achieve.logo}
+                  alt="Top SQL 50 achievement badge"
+                  width={56}
+                  height={56}
+                  class="w-full h-full object-contain"
+                />
               </div>
-              {achieve.period && <p class="text-sm md:text-right text-gray-700">{achieve.period}</p>}
-            </div>
-          </li>
-        ))}
+              <div class="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-3">
+                <div>
+                  <p class="font-medium">
+                    {achieve.name} - {achieve.provider}
+                  </p>
+                  <p class="text-sm text-gray-600">{achieve.desc}</p>
+                </div>
+                {achieve.period && (
+                  <p class="text-sm md:text-right text-gray-700">
+                    {achieve.period}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>

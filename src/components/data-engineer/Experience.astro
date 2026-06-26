@@ -3,46 +3,87 @@ import { Image } from 'astro:assets';
 import svgUnderline from '../../assets/underline.svg'
 
 import imgSenseLogo from '../../assets/company/sense-worldwide.jpg';
+import imgBiaLogo from '../../assets/company/boston-institute-of-analytics.jpg';
+import imgInspirusLogo from '../../assets/company/inspirus-education.jpg';
 import imgEcellLogo from '../../assets/company/ecell-logo.png';
-import imgUCLLogo from '../../assets/company/ucl_school_of_management_logo.jpg';
+import imgBarcLogo from '../../assets/company/Bhabha_Atomic_Research_Centre_Logo.png';
 
 const experiences = [
   {
-    company: 'Sense Worldwide',
-    role: 'Data Engineer Intern',
-    period: 'May 2025 – Aug 2025',
-    location: 'London',
-    logo: imgSenseLogo,
-    description:
-      'Built an AI tool for social media analysis with data scientists and consultants, saving 20+ hours per client. Engineered scalable pipelines on GCP (Pub/Sub, BigQuery, Cloud Functions) and designed Looker dashboards for trends and reporting.',
-    },
+    company: 'Hejmo Accommodation',
+    role: 'Sales and Marketing Executive - Residential Letting',
+    period: 'May 2026 – Present',
+    location: 'London, UK',
+    points: [
+      'Closed 2 contracts within a single month, generating an estimated £46,800 in projected contract value (based on a 2-year London tenancy average).',
+      'Handled listings on SpareRoom, writing the property descriptions and taking photos/videos to attract the right tenants.',
+      'Did direct outreach on SpareRoom, matching our listings with people looking for rooms and messaging over 400 prospects in 2 weeks.',
+      'Managed the entire viewing process, from answering initial inquiries and scheduling to running 8 viewings and building a rapport with clients.',
+      'Walked tenants through the paperwork, explaining contract details, Assured Shorthold Tenancies (ASTs), and how deposit protection schemes work.'
+    ]
+  },
   {
-    company: 'UCL',
-    role: 'MSc Dissertation — AI Social Listening Platform (Sense Worldwide)',
+    company: 'UCL & Sense Worldwide',
+    role: 'Data Engineer / MSc Dissertation - Consumer Insights',
     period: 'Apr 2025 – Aug 2025',
-    location: 'London',
-    logo: imgUCLLogo,
-    description:
-      'Designed a cloud-native social listening stack: robust collection, orchestration with Cloud Functions and Apps Script, Vertex AI/Gemini for topic modelling and summarisation, and BigQuery plus Looker for consultant-ready insights.',
+    location: 'London, UK',
+    logo: imgSenseLogo,
+    points: [
+      'Built a low-cost tool for market research on social media (saved 20 hours of work per project, i.e., £1,320 per project assuming a £66 hourly rate for innovation consultants).',
+      'Engineered a web-scraping-based data collection pipeline that collected search results, Reddit posts, and Quora comments about a specific niche (2,000 comments/min) (Tools: BrightData API, Google Cloud, Python).',
+      'Designed a data model for BigQuery, ETL workflow, and SQL queries that balanced speed and cost.',
+      'Built an automated AI workflow to extract topics and insights from the collected comments (Gemini - Vertex AI, BERTopic).',
+      'Designed visualizations, graphs, and an interactive dashboard on Looker Studio that helped consultants ideate data-backed hypotheses.'
+    ]
   },
   {
-    company: 'UCL',
-    role: 'Data Engineering (module)',
-    period: 'Jan 2025 – Mar 2025',
-    location: 'London',
-    logo: imgUCLLogo,
-    description:
-      'Software engineering for large datasets — architecture, implementation, and quality practices for dependable data systems.'
+    company: 'Bhabha Atomic Research Centre',
+    role: 'Machine Learning Project Trainee',
+    period: 'Sep 2023 – Apr 2024',
+    location: 'Mumbai, India',
+    logo: imgBarcLogo,
+    logoBg: 'bg-white text-black',
+    points: [
+      'Trained an object detection model for recycle sorting (YOLOv8), performed hyperparameter tuning and data annotation.',
+      'Used data augmentation and synthetic data generation to expand the dataset.',
+      'Built a Tkinter GUI and wrote scripts for camera calibration and image-to-real-world coordinate translation.'
+    ]
   },
   {
-    company: 'Entrepreneurship Cell, SAKEC',
-    role: 'Technical Head',
-    period: '2020 – 2022',
-    location: 'Mumbai',
+    company: 'Inspirus Education',
+    role: 'Freelance WordPress Developer - Study Abroad Consultants',
+    period: 'Apr 2023 – May 2023',
+    location: 'Mumbai, India',
+    logo: imgInspirusLogo,
+    points: [
+      'Managed a 1-month website project covering copywriting for 9 pages, WordPress visual design, implementation, on-page SEO, and technical setup.',
+      'Delivered a responsive, brand-consistent website optimized for speed and search engine visibility, achieving 87+ Google Lighthouse scores across all categories (Performance, Accessibility, Best Practices, and SEO).'
+    ]
+  },
+  {
+    company: 'Boston Institute of Analytics',
+    role: 'Digital Marketing Executive - Professional Training Programs',
+    period: 'Sep 2022 – Feb 2023',
+    location: 'Mumbai, India',
+    logo: imgBiaLogo,
+    points: [
+      'Built and launched the startup\'s first Meta Lead Ads campaign from the ground up, managing a £500 budget over 2 months to generate 247 leads, drive 8 closed sales, and generate £4,880 in revenue—fully booking the data science program cohort.',
+      'Wrote copy templates for email marketing and sent personalized emails by pulling data from the CRM and creating workflows in Microsoft Power Automate.'
+    ]
+  },
+  {
+    company: 'Entrepreneurship-Cell, SAKEC',
+    role: 'Website Lead and Content Creation Volunteer',
+    period: 'Jun 2022 – Mar 2023',
+    location: 'Mumbai, India',
     logo: imgEcellLogo,
-    description:
-      'Led Zaika festival ordering app and event web delivery; coached junior developers on shipping and production readiness.',
-  },
+    points: [
+      'Successfully established E-Cell’s web presence by launching a website and performing search engine optimization, bringing site to 1st page.',
+      'Promoted our flagship entrepreneurial food event “Food Fiesta” and innovative food ordering app “Zaika”, gathering 600+ attendees.',
+      'Created promotional videos and graphics such as teaser, website showcase and instruction guide using Adobe Premiere Pro and Photoshop.',
+      'Identified revenue drivers by analysing menu item performance, vendor performance and customer trends from sales data using Excel.'
+    ]
+  }
 ]
 ---
 
@@ -58,19 +99,27 @@ const experiences = [
     <div class="space-y-8 relative">
       {experiences.map((item) => (
         <div class="border-2 bg-white p-4 md:p-6 flex gap-4 md:gap-6 items-start relative">
-          <div class="w-12 h-12 md:w-14 md:h-14 overflow-hidden border-2 bg-black flex items-center justify-center shrink-0">
-            <Image src={item.logo} alt={`${item.company} logo`} width={56} height={56} class="w-full h-full object-contain" />
+          <div class={`w-12 h-12 md:w-14 md:h-14 overflow-hidden border-2 border-black flex items-center justify-center shrink-0 font-bold text-xl uppercase select-none ${item.logoBg || 'bg-black text-white'}`}>
+            {item.logo ? (
+              <Image src={item.logo} alt={`${item.company} logo`} width={56} height={56} class="w-full h-full object-contain" />
+            ) : (
+              <span>{item.company.charAt(0)}</span>
+            )}
           </div>
-          <div class="space-y-2">
-            <h2 class="text-xl font-medium">
-              {item.company} - {item.role}
-            </h2>
-            <p class="text-xs uppercase tracking-wide text-gray-500">
-              {item.period} · {item.location}
-            </p>
-            <p class="text-base">
-              {item.description}
-            </p>
+          <div class="space-y-3 flex-1 min-w-0">
+            <div class="space-y-1">
+              <h2 class="text-xl font-medium leading-tight">
+                {item.company} - {item.role}
+              </h2>
+              <p class="text-xs uppercase tracking-wide text-gray-500 font-medium">
+                {item.period} · {item.location}
+              </p>
+            </div>
+            <ul class="list-disc pl-5 space-y-1.5 text-sm md:text-base text-gray-700">
+              {item.points.map((point) => (
+                <li class="leading-relaxed">{point}</li>
+              ))}
+            </ul>
           </div>
         </div>
       ))}
